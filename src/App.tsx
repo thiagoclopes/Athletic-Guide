@@ -7,10 +7,14 @@ import { SideBar } from "./components/drawer";
 export function App() {
   
   return (
-    <div className="App" style={{ padding: '0px', fontFamily: 'Arial, sans-serif' }}>
+    <div className="App" style={{ display: 'flex', height: '100vh' }}>
       <SideBar />
-      <Header />
-      <RouterProvider router={router} />
+      <div style={{flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <Header />
+        <div style={{ flex: 1, overflow: 'auto', padding: '15px' }}>
+          <RouterProvider router={router} />
+        </div>
+      </div>
     </div>
   );
 }
