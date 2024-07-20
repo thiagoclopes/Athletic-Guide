@@ -1,11 +1,19 @@
-import logo from "../assets/logo.png"
+import { AppBar, IconButton, Toolbar } from "@mui/material"
+
+import MenuIcon from '@mui/icons-material/Menu';
 
 export function Header() {
     return (
       <>
-        <div className="border-b w-full relative flex items-center justify-center" style={{ height: '100px' }}>
-            <img src={logo} alt="Logo" className="h-24" style={{ marginBottom: '-95px' }} />
-        </div>
+        <AppBar position="static">
+          <Toolbar variant="dense" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <IconButton edge="start" color="inherit" aria-label="menu" sx={{ position: 'absolute', left: 20 }}>
+             <MenuIcon />
+            </IconButton>
+            
+          </Toolbar>
+        </AppBar>
+        
       </>
     )
   }
