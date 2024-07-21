@@ -13,7 +13,6 @@ export function SideBar(){
         '& .MuiDrawer-paper': {
           width: 240,
           boxSizing: 'border-box',
-          position: 'fixed',
           height: '100%',
         },
       }}
