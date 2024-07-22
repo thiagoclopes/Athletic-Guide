@@ -1,10 +1,11 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { CreateDiet } from './pages/diet/CreateDiet';
 import { RegistrationLayout } from './pages/_layouts/registration';
 import { AppLayout } from './pages/_layouts/app';
-import { CaptureAge } from './pages/InformationCapture/CaptureAge';
 import { Questionnaire } from './pages/InformationCapture/Questionnaire';
+import { Dashboard } from './pages/Dashboard';
+import { MealPlan } from './pages/MealPlan';
+import { MyActivity } from './pages/MyActivity';
 
 export const router = createBrowserRouter([
     {
@@ -22,7 +23,21 @@ export const router = createBrowserRouter([
         path: "/dashboard",
         element: <AppLayout />,
         children: [
-          { path: "/dashboard", element: <CreateDiet /> },
+          { path: "/dashboard", element: <Dashboard /> },
+        ],
+      },
+      {
+        path: "/plano-alimentar",
+        element: <AppLayout />,
+        children: [
+          { path: "/plano-alimentar", element: <MealPlan />},
+        ],
+      },
+      {
+        path: "/minha-atividade",
+        element: <AppLayout />,
+        children: [
+          { path: "/minha-atividade", element: <MyActivity />},
         ],
       },
   ]);

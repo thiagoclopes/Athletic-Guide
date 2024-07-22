@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button, TextField, Typography, Container, Box, MenuItem } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { QuestionnaireData } from './CreatingDiet'; // Ajuste o caminho conforme necessário
+import { useDiet } from './DietContext'; // Ajuste o caminho conforme necessário
 
 interface Question {
   id: number;
@@ -26,6 +28,7 @@ const questions: Question[] = [
 ];
 
 export function Questionnaire() {
+  const { setDiet } = useDiet();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<{ [key: number]: string | number }>({});
   const questionRefs = useRef<Array<HTMLDivElement | null>>([]);
@@ -51,17 +54,40 @@ export function Questionnaire() {
     }));
   };
 
-  const handleNextQuestion = () => {
+  const handleNextQuestion = async () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(prevIndex => prevIndex + 1);
     } else {
-        console.log('Respostas:', answers);
+      try {
+        // Transformar os dados no formato esperado
+        const questionnaireData: QuestionnaireData = {
+          name: answers[1] as string,
+          age: answers[2] as number,
+          gender: answers[3] as string,
+          weight: answers[4] as number,
+          height: answers[5] as number,
+          training_goal: answers[6] as string,
+          activity_level: answers[7] as string,
+          medical_condition: answers[8] as string,
+          allergies: answers[9] as string,
+          dietary_restrictions: answers[10] as string,
+          meal_frequency: answers[11] as number,
+          current_training_plan: answers[12] as string,
+          training_frequency_duration: answers[13] as string
+        };
+        
+        // Chamar setDiet para atualizar o contexto com os dados
+        await setDiet(questionnaireData);
+
         alert('Obrigado por responder o questionário!');
-        navigate('/dashboard');
+        navigate('/plano-alimentar');
+      } catch (error) {
+        console.error('Erro ao criar a dieta:', error);
+        alert('Ocorreu um erro ao processar os dados. Tente novamente.');
+      }
     }
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const currentQuestion = questions[currentQuestionIndex];
 
   return (

@@ -2,8 +2,18 @@ import {Drawer, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/ma
 import logo from "../assets/logo.png"
 import DirectionsRunOutlinedIcon from '@mui/icons-material/DirectionsRunOutlined';
 import RestaurantOutlinedIcon from '@mui/icons-material/RestaurantOutlined';
+import { useNavigate } from 'react-router-dom';
+
 
 export function SideBar(){
+  const navigate = useNavigate();
+  const handleNavigateToPlan = () => {
+      navigate('/plano-alimentar');
+  };
+  const handleNavigateToActivity = () => {
+    navigate('/minha-atividade');
+};
+
   return (
     <Drawer
       variant="permanent"
@@ -21,13 +31,13 @@ export function SideBar(){
         <img src={logo} alt="Logo" style={{ height: 80 }} />
       </div>
       <List sx={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <ListItemButton sx={{ display: 'flex', alignItems: 'center', width: 'auto', marginBottom: 1 }}>
+        <ListItemButton sx={{ display: 'flex', alignItems: 'center', width: 'auto', marginBottom: 1 }} onClick={handleNavigateToActivity}>
           <ListItemIcon sx={{ minWidth: 'unset', marginRight: 1 }}>
             <DirectionsRunOutlinedIcon />
           </ListItemIcon>
           <ListItemText primary="Minha atividade" />
         </ListItemButton>
-        <ListItemButton sx={{ display: 'flex', alignItems: 'center', width: 'auto', marginBottom: 1 }}>
+        <ListItemButton sx={{ display: 'flex', alignItems: 'center', width: 'auto', marginBottom: 1 }} onClick={handleNavigateToPlan}>
           <ListItemIcon sx={{ minWidth: 'unset', marginRight: 1 }}>
             <RestaurantOutlinedIcon />
           </ListItemIcon>
