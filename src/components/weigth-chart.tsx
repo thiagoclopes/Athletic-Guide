@@ -1,4 +1,6 @@
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import React from 'react';
+import { Card } from '@mui/material';
 const data = [
     { name: 'Semana 1', weight: 70, goal: 68 },
     { name: 'Semana 2', weight: 69.5, goal: 68 },
@@ -20,13 +22,15 @@ export function WeightChart() {
   const maxWeight = Math.max(...data.map(d => d.weight));
 
   return (
-    <LineChart width={600} height={300} data={data}>
-      <XAxis dataKey="name" />
-      <YAxis domain={[minWeight - 1, maxWeight + 1]} tickCount={5} /> {/* Ajustar o domínio */}
-      <Tooltip />
-      <Legend />
-      <Line type="monotone" dataKey="weight" stroke="#8884d8" />
-      <Line type="monotone" dataKey="goal" stroke="#82ca9d" />
-    </LineChart>
+    <Card sx={{  }}>
+      <LineChart width={600} height={300} data={data}>
+        <XAxis dataKey="name" />
+        <YAxis domain={[minWeight - 1, maxWeight + 1]} tickCount={5} /> {/* Ajustar o domínio */}
+        <Tooltip />
+        <Legend />
+        <Line type="monotone" dataKey="weight" stroke="#8884d8" />
+        <Line type="monotone" dataKey="goal" stroke="#82ca9d" />
+      </LineChart>
+    </Card>
   );
 }

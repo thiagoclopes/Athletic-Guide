@@ -6,6 +6,7 @@ import { Questionnaire } from './pages/InformationCapture/Questionnaire';
 import { Dashboard } from './pages/Dashboard';
 import { MealPlan } from './pages/MealPlan';
 import { MyActivity } from './pages/MyActivity';
+import { Contact } from './pages/Contact';
 
 export const router = createBrowserRouter([
     {
@@ -38,6 +39,13 @@ export const router = createBrowserRouter([
         element: <AppLayout />,
         children: [
           { path: "/minha-atividade", element: <MyActivity />},
+        ],
+      },
+      {
+        path: "/contato",
+        element: <AppLayout />,
+        children: [
+          { path: "/contato", element: <Contact />},
         ],
       },
   ]);
