@@ -19,27 +19,40 @@ export interface QuestionnaireData {
   
 
   export type RefeicaoTipo = 'cafe_da_manha' | 'lanche_da_manha' | 'almoco' | 'lanche_da_tarde' | 'jantar';
-  export interface DietDataProps {
-    objetivo_calorico: string;
-    necessidades_caloricas_diarias_para_objetivo: number;
-    plano_de_refeicoes_diarias: {
-      total_de_refeicoes: number;
-      calorias_por_refeicao: number;
+
+export interface DietDataProps {
+  objetivo_calorico: string;
+  necessidades_caloricas_diarias_para_objetivo: number;
+  plano_de_refeicoes_diarias: {
+    total_de_refeicoes: number;
+    calorias_por_refeicao: number;
+  };
+  necessidades_diarias_de_macronutrientes: {
+    proteinas: number;
+    carboidratos: number;
+    gorduras: number;
+  };
+  exemplo_de_plano_de_refeicoes: {
+    [key in RefeicaoTipo]: {
+      alimentos: {
+        nome: string;
+        quantidade: number;
+        proteina: number;
+        carboidrato: number;
+        gordura: number;
+      }[];
     };
-    necessidades_diarias_de_macronutrientes: {
-      proteinas: string;
-      carboidratos: string;
-      gorduras: string;
-    };
-    exemplo_de_plano_de_refeicoes: {
-      [key in RefeicaoTipo]: {
-        alimentos: {
-          nome: string;
-          quantidade: string;
-        }[];
-      };
-    };
-  }
+  };
+}
+
+  const saveDietData = async (diet: DietDataProps) => {
+    try {
+      const response = await axios.post('http://localhost:3000/diets', diet);
+      console.log('Dados salvos com sucesso:', response.data);
+    } catch (error) {
+      console.error('Erro ao salvar os dados:', error);
+    }
+  };
   
   
   export async function createDiet(data: QuestionnaireData): Promise<DietDataProps> {
@@ -93,33 +106,25 @@ export interface QuestionnaireData {
                     },
                     "exemplo_de_plano_de_refeicoes": {
                         "cafe_da_manha": {
-                            "alimentos": [
-                                {"nome": "", "quantidade": "", "proteina": "", "carboidrato": "", "gordura": ""}
-                            ]
+                            "alimentos": []
                         },
                         "lanche_da_manha": {
-                            "alimentos": [
-                                {"nome": "", "quantidade": "", "proteina": "", "carboidrato": "", "gordura": ""}
-                            ]
+                            "alimentos": []
                         },
                         "almoco": {
-                            "alimentos": [
-                                {"nome": "", "quantidade": "", "proteina": "", "carboidrato": "", "gordura": ""}
-                            ]
+                            "alimentos": []
                         },
                         "lanche_da_tarde": {
-                            "alimentos": [
-                                {"nome": "", "quantidade": "", "proteina": "", "carboidrato": "", "gordura": ""}
-                            ]
+                            "alimentos": []
                         },
                         "jantar": {
-                            "alimentos": [
-                                {"nome": "", "quantidade": "", "proteina": "", "carboidrato": "", "gordura": ""}
-                            ]
+                            "alimentos": []
                         }
                     }
                   }
-
+                  Preencha as refeições (cafe_da_manha, lanche_da_manha, almoco, lanche_da_tarde, jantar) com alimentos que atendam às necessidades diárias de proteínas, carboidratos e gorduras.
+                  Inclua no JSON para cada alimento: nome, quantidade, proteina(g), carboidrato(g), e gordura(g).
+                  As quantidades e a composição dos alimentos devem alinhar-se com os valores recomendados de macronutrientes calculados anteriormente.
   
                   A resposta deve ser apenas o JSON, sem nenhum texto adicional.
                 `
@@ -134,6 +139,8 @@ export interface QuestionnaireData {
           }
         );
         const diet: DietDataProps = JSON.parse(response.data.choices[0].message.content);
+        console.log(diet)
+        saveDietData(diet)
         if (!diet) {
             throw new Error('Resposta inválida da API');
         }

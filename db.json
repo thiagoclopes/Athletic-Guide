@@ -1,0 +1,188 @@
+{
+  "diets": [
+    {
+      "id": "01cf",
+      "objetivo_calorico": "Aumentar massa muscular",
+      "necessidades_caloricas_diarias_para_objetivo": 2358.54,
+      "plano_de_refeicoes_diarias": {
+        "total_de_refeicoes": 6,
+        "calorias_por_refeicao": 393.09
+      },
+      "necessidades_diarias_de_macronutrientes": {
+        "proteinas": 120,
+        "carboidratos": 293,
+        "gorduras": 44
+      },
+      "exemplo_de_plano_de_refeicoes": {
+        "cafe_da_manha": {
+          "alimentos": [
+            {
+              "nome": "Aveia",
+              "quantidade(g)": 50,
+              "proteina(g)": 6.5,
+              "carboidrato(g)": 32,
+              "gordura(g)": 2
+            }
+          ]
+        },
+        "lanche_da_manha": {
+          "alimentos": [
+            {
+              "nome": "Ovo Cozido",
+              "quantidade(g)": 50,
+              "proteina(g)": 6.8,
+              "carboidrato(g)": 0.6,
+              "gordura(g)": 5
+            }
+          ]
+        },
+        "almoco": {
+          "alimentos": [
+            {
+              "nome": "Frango Grelhado",
+              "quantidade(g)": 100,
+              "proteina(g)": 21,
+              "carboidrato(g)": 0,
+              "gordura(g)": 3.1
+            },
+            {
+              "nome": "Arroz Integral",
+              "quantidade(g)": 150,
+              "proteina(g)": 4.3,
+              "carboidrato(g)": 45,
+              "gordura(g)": 1
+            }
+          ]
+        },
+        "lanche_da_tarde": {
+          "alimentos": [
+            {
+              "nome": "Iogurte Grego Natural",
+              "quantidade(g)": 200,
+              "proteina(g)": 10.7,
+              "carboidrato(g)": 4.7,
+              "gordura(g)": 5.3
+            }
+          ]
+        },
+        "jantar": {
+          "alimentos": [
+            {
+              "nome": "Salmão Grelhado",
+              "quantidade(g)": 100,
+              "proteina(g)": 25,
+              "carboidrato(g)": 0,
+              "gordura(g)": 9
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "def0",
+      "objetivo_calorico": "Aumento de massa muscular",
+      "necessidades_caloricas_diarias_para_objetivo": 2036,
+      "plano_de_refeicoes_diarias": {
+        "total_de_refeicoes": 6,
+        "calorias_por_refeicao": 339
+      },
+      "necessidades_diarias_de_macronutrientes": {
+        "proteinas": "90g",
+        "carboidratos": "282g",
+        "gorduras": "40g"
+      },
+      "exemplo_de_plano_de_refeicoes": {
+        "cafe_da_manha": {
+          "alimentos": [
+            {
+              "nome": "Ovos",
+              "quantidade": "2 unidades",
+              "proteina": 14,
+              "carboidrato": 1,
+              "gordura": 10
+            },
+            {
+              "nome": "Aveia",
+              "quantidade": "40g",
+              "proteina": 5,
+              "carboidrato": 27,
+              "gordura": 2
+            }
+          ]
+        },
+        "lanche_da_manha": {
+          "alimentos": [
+            {
+              "nome": "Iogurte Grego",
+              "quantidade": "200g",
+              "proteina": 20,
+              "carboidrato": 9,
+              "gordura": 10
+            }
+          ]
+        },
+        "almoco": {
+          "alimentos": [
+            {
+              "nome": "Frango",
+              "quantidade": "100g",
+              "proteina": 25,
+              "carboidrato": 0,
+              "gordura": 3
+            },
+            {
+              "nome": "Arroz Integral",
+              "quantidade": "150g",
+              "proteina": 4,
+              "carboidrato": 32,
+              "gordura": 1
+            },
+            {
+              "nome": "Feijão",
+              "quantidade": "100g",
+              "proteina": 7,
+              "carboidrato": 18,
+              "gordura": 1
+            }
+          ]
+        },
+        "lanche_da_tarde": {
+          "alimentos": [
+            {
+              "nome": "Banana",
+              "quantidade": "1 unidade",
+              "proteina": 1,
+              "carboidrato": 27,
+              "gordura": 0
+            },
+            {
+              "nome": "Manteiga de Amendoim",
+              "quantidade": "20g",
+              "proteina": 5,
+              "carboidrato": 4,
+              "gordura": 10
+            }
+          ]
+        },
+        "jantar": {
+          "alimentos": [
+            {
+              "nome": "Salmão",
+              "quantidade": "150g",
+              "proteina": 22,
+              "carboidrato": 0,
+              "gordura": 10
+            },
+            {
+              "nome": "Batata Doce",
+              "quantidade": "200g",
+              "proteina": 4,
+              "carboidrato": 44,
+              "gordura": 0
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

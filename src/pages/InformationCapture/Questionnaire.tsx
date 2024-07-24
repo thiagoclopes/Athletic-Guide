@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button, TextField, Typography, Container, Box, MenuItem } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { QuestionnaireData } from './CreatingDiet'; // Ajuste o caminho conforme necessário
-import { useDiet } from './DietContext'; // Ajuste o caminho conforme necessário
+import { createDiet, QuestionnaireData } from './CreatingDiet'; // Ajuste o caminho conforme necessário
 
 interface Question {
   id: number;
@@ -28,7 +27,6 @@ const questions: Question[] = [
 ];
 
 export function Questionnaire() {
-  const { setDiet } = useDiet();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<{ [key: number]: string | number }>({});
   const questionRefs = useRef<Array<HTMLDivElement | null>>([]);
@@ -77,7 +75,7 @@ export function Questionnaire() {
         };
         
         // Chamar setDiet para atualizar o contexto com os dados
-        await setDiet(questionnaireData);
+        await createDiet(questionnaireData);
 
         alert('Obrigado por responder o questionário!');
         navigate('/plano-alimentar');
