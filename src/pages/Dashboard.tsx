@@ -1,4 +1,3 @@
-import { Height } from "@mui/icons-material";
 import { WeatherCard } from "../components/weather-card";
 import { WeightChart } from "../components/weigth-chart";
 import { Grid } from '@mui/material';

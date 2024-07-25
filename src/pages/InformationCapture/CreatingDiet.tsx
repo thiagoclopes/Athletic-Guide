@@ -2,6 +2,7 @@ import axios from "axios";
 
 export interface QuestionnaireData {
     name: string;
+    email: string;
     age: number;
     gender: string;
     weight: number;
@@ -21,6 +22,7 @@ export interface QuestionnaireData {
   export type RefeicaoTipo = 'cafe_da_manha' | 'lanche_da_manha' | 'almoco' | 'lanche_da_tarde' | 'jantar';
 
 export interface DietDataProps {
+  email?: string;
   objetivo_calorico: string;
   necessidades_caloricas_diarias_para_objetivo: number;
   plano_de_refeicoes_diarias: {
@@ -45,19 +47,12 @@ export interface DietDataProps {
   };
 }
 
-  const saveDietData = async (diet: DietDataProps) => {
-    try {
-      const response = await axios.post('http://localhost:3000/diets', diet);
-      console.log('Dados salvos com sucesso:', response.data);
-    } catch (error) {
-      console.error('Erro ao salvar os dados:', error);
-    }
-  };
+
   
   
   export async function createDiet(data: QuestionnaireData): Promise<DietDataProps> {
     console.log("data: "+data.activity_level)
-    const { name, age, gender, weight, height, training_goal, activity_level, medical_condition, allergies, dietary_restrictions, meal_frequency, current_training_plan, training_frequency_duration } = data;
+    const { name, email, age, gender, weight, height, training_goal, activity_level, medical_condition, allergies, dietary_restrictions, meal_frequency, current_training_plan, training_frequency_duration } = data;
     const imc = weight / ((height / 100) ** 2);
     const tmb = Number(88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age))
     
@@ -123,8 +118,9 @@ export interface DietDataProps {
                     }
                   }
                   Preencha as refeições (cafe_da_manha, lanche_da_manha, almoco, lanche_da_tarde, jantar) com alimentos que atendam às necessidades diárias de proteínas, carboidratos e gorduras.
-                  Inclua no JSON para cada alimento: nome, quantidade, proteina(g), carboidrato(g), e gordura(g).
+                  Inclua no JSON para cada alimento: nome, quantidade(em gramas ou unidades, especifique a unidade. Exemplo: 25g, 2 Unidades), proteina, carboidrato, e gordura.
                   As quantidades e a composição dos alimentos devem alinhar-se com os valores recomendados de macronutrientes calculados anteriormente.
+                  Especifique quando necessário a preparação do alimento, exemplo: (Ovo cozido, Ovo frito)
   
                   A resposta deve ser apenas o JSON, sem nenhum texto adicional.
                 `
@@ -140,11 +136,13 @@ export interface DietDataProps {
         );
         const diet: DietDataProps = JSON.parse(response.data.choices[0].message.content);
         console.log(diet)
-        saveDietData(diet)
+        diet.email = email
+        console.log(diet)
+
         if (!diet) {
             throw new Error('Resposta inválida da API');
         }
-        console.log(diet)
+
         return diet;
       } catch (err) {
         console.log(err)

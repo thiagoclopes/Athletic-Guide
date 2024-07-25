@@ -1,8 +1,15 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Box, Typography, Button } from '@mui/material';
 import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
+import { FormDialog } from '../components/login-dialog';
 
 export const Home = () => {
+  const navigate = useNavigate();
+
+  function handleNavigateToRegistration() {
+    navigate('/registration');
+  }
+
   return (
     <Box
       sx={{
@@ -21,11 +28,13 @@ export const Home = () => {
       <Typography variant="h6" gutterBottom sx={{textAlign: 'center'}}>
         Sua jornada para atingir o auge do desempenho começa agora. Registre seus dados e dê o primeiro passo rumo às suas melhores conquistas. Vamos juntos transformar seus objetivos em resultados extraordinários!
       </Typography>
-      <Link to="/registration" style={{ textDecoration: 'none' }}>
-      <Button variant="contained" color="primary">
-        Registrar Dados
-      </Button>
-      </Link>
+      <Box sx={{display: 'flex', gap:2}}>
+        <Button variant="contained" color="primary" onClick={handleNavigateToRegistration}>
+          Registrar Dados
+        </Button>
+        <FormDialog />
+      </Box>
+
     </Box>
   );
 };

@@ -4,8 +4,7 @@ import DirectionsRunOutlinedIcon from '@mui/icons-material/DirectionsRunOutlined
 import RestaurantOutlinedIcon from '@mui/icons-material/RestaurantOutlined';
 import CallIcon from '@mui/icons-material/Call';
 import { useNavigate } from 'react-router-dom';
-import MenuIcon from '@mui/icons-material/Menu';
-
+import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 
 export function SideBar(){
   const navigate = useNavigate();
@@ -17,6 +16,9 @@ export function SideBar(){
   };
   const handleNavigateToContact = () => {
     navigate('/contato');
+  };
+  const handleNavigateToDashboard = () => {
+    navigate('/dashboard');
   };
 
   return (
@@ -37,6 +39,12 @@ export function SideBar(){
         <img src={logo} alt="Logo" style={{ height: 80 }} />
       </div>
       <List sx={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <ListItemButton sx={{ display: 'flex', alignItems: 'center', width: '80%', marginBottom: 1 }} onClick={handleNavigateToDashboard}>
+          <ListItemIcon sx={{ minWidth: 'unset', marginRight: 1 }}>
+            <AssessmentOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText primary="Dashboard" />
+        </ListItemButton>
         <ListItemButton sx={{ display: 'flex', alignItems: 'center', width: '80%', marginBottom: 1 }} onClick={handleNavigateToActivity}>
           <ListItemIcon sx={{ minWidth: 'unset', marginRight: 1 }}>
             <DirectionsRunOutlinedIcon />

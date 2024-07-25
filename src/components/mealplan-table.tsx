@@ -26,10 +26,10 @@ export function MealPlanTable( { foodItems, title }:MealPlanTableProps, ) {
           <TableHead>
             <TableRow>
               <TableCell>Alimento</TableCell>
-              <TableCell align="right">Quantidade (g)</TableCell>
-              <TableCell align="right">Proteínas (g)</TableCell>
-              <TableCell align="right">Carboidratos (g)</TableCell>
-              <TableCell align="right">Gorduras (g)</TableCell>
+              <TableCell align="right">Quantidade</TableCell>
+              <TableCell align="right">Proteínas</TableCell>
+              <TableCell align="right">Carboidratos</TableCell>
+              <TableCell align="right">Gorduras</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
