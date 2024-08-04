@@ -1,3 +1,4 @@
+import { CompetitionCalendarModal } from "../components/competition-calendar";
 import { WeatherCard } from "../components/weather-card";
 import { WeightChart } from "../components/weigth-chart";
 import { Grid } from '@mui/material';
@@ -22,7 +23,7 @@ import React from "react";
             <WeightChart />
         </Grid>
         <Grid item xs={12} md={3}>
-          Opa
+          <CompetitionCalendarModal />
         </Grid>
       </Grid>
     );

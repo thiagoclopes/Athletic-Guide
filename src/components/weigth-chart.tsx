@@ -33,13 +33,13 @@ export function WeightChart() {
                         <Legend
                             verticalAlign="top"
                             align="left"
-                            wrapperStyle={{ paddingBottom: 20 }} // Espaçamento inferior para a legenda
+                            wrapperStyle={{ paddingBottom: 20 }}
                         />
                         <XAxis dataKey="name" />
                         <YAxis domain={[minWeight - 1, maxWeight + 1]} tickCount={5} />
                         <Tooltip />
-                        <Line type="monotone" dataKey="weight" stroke="#8884d8" />
-                        <Line type="monotone" dataKey="goal" stroke="#82ca9d" />
+                        <Line dataKey="weight" stroke="#8884d8"  dot={false} />
+                        <Line dataKey="goal" stroke="#82ca9d"  dot={false} />
                     </LineChart>
                 </ResponsiveContainer>
             </div>
