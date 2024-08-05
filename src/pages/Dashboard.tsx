@@ -15,10 +15,10 @@ import React from "react";
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item xs={12} md={6} sx={{ height: '60vh' }}>
+        <Grid item xs={12} md={6}>
           <WeatherCard />
         </Grid>
-        <Grid item xs={12} md={6} sx={{ height: '60vh' }}>
+        <Grid item xs={12} md={6}>
           <WeightChart />
         </Grid>
       </Grid>

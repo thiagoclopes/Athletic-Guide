@@ -48,7 +48,7 @@ export function FormDialog() {
 
   return (
     <React.Fragment>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      <Button sx={{width: '20vw'}} variant="outlined" onClick={handleClickOpen}>
         Fazer login
       </Button>
       <Dialog

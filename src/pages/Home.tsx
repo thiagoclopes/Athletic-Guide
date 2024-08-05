@@ -25,11 +25,11 @@ export const Home = () => {
         Bem-vindo ao Athletic Guide!
         <RocketLaunchOutlinedIcon sx={{ fontSize: 'inherit', marginLeft: '8px' }}/>
       </Typography>
-      <Typography variant="h6" gutterBottom sx={{textAlign: 'center'}}>
+      <Typography variant="h6" gutterBottom sx={{textAlign: 'center', width: '70%', marginBottom: '4vh'}}>
         Sua jornada para atingir o auge do desempenho começa agora. Registre seus dados e dê o primeiro passo rumo às suas melhores conquistas. Vamos juntos transformar seus objetivos em resultados extraordinários!
       </Typography>
       <Box sx={{display: 'flex', gap:2}}>
-        <Button variant="contained" color="primary" onClick={handleNavigateToRegistration}>
+        <Button sx={{width: '20vw'}} variant="contained" color="primary" onClick={handleNavigateToRegistration}>
           Registrar Dados
         </Button>
         <FormDialog />

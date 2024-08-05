@@ -62,21 +62,23 @@ export function MealPlan() {
 
   return (
     <div>
-      <h1>Plano de Alimentação</h1>
-      <h2>Objetivo Calórico</h2>
-      <p>{diet.objetivo_calorico}</p>
+      <div style={{margin:'auto'}}>
+        <h1>Plano de Alimentação</h1>
+        <h2>Objetivo Calórico</h2>
+        <p>{diet.objetivo_calorico}</p>
 
-      <h2>Necessidades Calóricas Diárias para Objetivo</h2>
-      <p>{diet.necessidades_caloricas_diarias_para_objetivo} calorias</p>
+        <h2>Necessidades Calóricas Diárias para Objetivo</h2>
+        <p>{diet.necessidades_caloricas_diarias_para_objetivo} calorias</p>
 
-      <h2>Plano de Refeições Diárias</h2>
-      <p>Total de Refeições: {diet.plano_de_refeicoes_diarias.total_de_refeicoes}</p>
-      <p>Calorias por Refeição: {diet.plano_de_refeicoes_diarias.calorias_por_refeicao}</p>
+        <h2>Plano de Refeições Diárias</h2>
+        <p>Total de Refeições: {diet.plano_de_refeicoes_diarias.total_de_refeicoes}</p>
+        <p>Calorias por Refeição: {diet.plano_de_refeicoes_diarias.calorias_por_refeicao}</p>
 
-      <h2>Necessidades Diárias de Macronutrientes</h2>
-      <p>Proteínas: {diet.necessidades_diarias_de_macronutrientes.proteinas}</p>
-      <p>Carboidratos: {diet.necessidades_diarias_de_macronutrientes.carboidratos}</p>
-      <p>Gorduras: {diet.necessidades_diarias_de_macronutrientes.gorduras}</p>
+        <h2>Necessidades Diárias de Macronutrientes</h2>
+        <p>Proteínas: {diet.necessidades_diarias_de_macronutrientes.proteinas}</p>
+        <p>Carboidratos: {diet.necessidades_diarias_de_macronutrientes.carboidratos}</p>
+        <p>Gorduras: {diet.necessidades_diarias_de_macronutrientes.gorduras}</p>
+      </div>
 
       <MealPlanTable foodItems={breakfastItems} title="Café da manhã" />
       <MealPlanTable foodItems={morningsnackItems} title="Lanche da manhã" />

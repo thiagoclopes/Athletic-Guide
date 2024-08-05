@@ -40,7 +40,7 @@ export function WeatherCard() {
     return (
       <div style={{ padding:'5%' }}>
         {weatherData ? (
-          <Card sx={{ width: '100%', margin: 'auto', height: '100%' }}>
+          <Card sx={{ width: '100%', margin: 'auto', height: '60vh' }}>
             <CardMedia
               component="img"
               height="auto"

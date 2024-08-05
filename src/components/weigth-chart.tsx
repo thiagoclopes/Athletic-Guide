@@ -22,15 +22,17 @@ export function WeightChart() {
   const maxWeight = Math.max(...data.map(d => d.weight));
 
   return (
-    <Card sx={{  }}>
-      <LineChart width={600} height={300} data={data}>
-        <XAxis dataKey="name" />
-        <YAxis domain={[minWeight - 1, maxWeight + 1]} tickCount={5} /> {/* Ajustar o domínio */}
-        <Tooltip />
-        <Legend />
-        <Line type="monotone" dataKey="weight" stroke="#8884d8" />
-        <Line type="monotone" dataKey="goal" stroke="#82ca9d" />
-      </LineChart>
-    </Card>
+    <div style={{ padding: '5%' }}>
+      <Card sx={{ height: '60vh' }}>
+        <LineChart width={600} height={300} data={data}>
+          <XAxis dataKey="name" />
+          <YAxis domain={[minWeight - 1, maxWeight + 1]} tickCount={5} /> {/* Ajustar o domínio */}
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="weight" stroke="#8884d8" />
+          <Line type="monotone" dataKey="goal" stroke="#82ca9d" />
+        </LineChart>
+      </Card>
+    </div>
   );
 }
