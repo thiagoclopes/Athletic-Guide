@@ -2,7 +2,6 @@ import axios from "axios";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import React from 'react';
-import { Padding } from "@mui/icons-material";
 
 interface WeatherData {
     city: string;
@@ -38,16 +37,17 @@ export function WeatherCard() {
     }, [city, apiKey]);
   
     return (
-      <div style={{ padding:'5%' }}>
+      <div style={{ padding:'5%'}}>
         {weatherData ? (
-          <Card sx={{ width: '100%', margin: 'auto', height: '60vh' }}>
+          <Card sx={{ width: '100%', height: '40vh', margin: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end'}}>
             <CardMedia
               component="img"
               height="auto"
               image={`http://openweathermap.org/img/wn/${weatherData.icon}@2x.png`}
               alt="weather icon"
+              sx={{ flex: '0 1 auto', maxHeight: '70%'}}
             />
-            <CardContent>
+            <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', height: '30%'}}>
               <Typography gutterBottom variant="h5" component="div">
                 {weatherData.city}
               </Typography>
