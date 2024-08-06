@@ -6,6 +6,7 @@ import { MealPlanTable } from "../components/mealplan-table";
 
 export function MealPlan() {
   const [diet, setDiet] = useState<DietDataProps>({
+    nome: '',
     objetivo_calorico: '',
     necessidades_caloricas_diarias_para_objetivo: 0,
     plano_de_refeicoes_diarias: {
@@ -59,11 +60,13 @@ export function MealPlan() {
   const lunchItems = diet.exemplo_de_plano_de_refeicoes.almoco.alimentos;
   const afternoonsnackItems = diet.exemplo_de_plano_de_refeicoes.lanche_da_tarde.alimentos;
   const dinnerItems = diet.exemplo_de_plano_de_refeicoes.jantar.alimentos;
-
+  const nome = diet.nome;
   return (
     <div>
       <div style={{margin:'auto'}}>
-        <h1>Plano de Alimentação</h1>
+        <h2 className="text-2xl font-bold justify-center">
+          Olá { nome }, este é o seu Plano de Alimentação
+        </h2>
         <h2>Objetivo Calórico</h2>
         <p>{diet.objetivo_calorico}</p>
 

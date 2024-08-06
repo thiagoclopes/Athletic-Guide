@@ -1,7 +1,7 @@
 import axios from "axios";
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import React from 'react';
+import { Card, CardContent } from "./ui/card";
 
 interface WeatherData {
     city: string;
@@ -37,23 +37,21 @@ export function WeatherCard() {
     }, [city, apiKey]);
   
     return (
-      <div style={{ padding:'5%'}}>
+      <div className="p-4">
         {weatherData ? (
-          <Card sx={{ width: '100%', height: '40vh', margin: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end'}}>
-            <CardMedia
-              component="img"
-              height="auto"
-              image={`http://openweathermap.org/img/wn/${weatherData.icon}@2x.png`}
-              alt="weather icon"
-              sx={{ flex: '0 1 auto', maxHeight: '70%'}}
-            />
-            <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', height: '30%'}}>
-              <Typography gutterBottom variant="h5" component="div">
-                {weatherData.city}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
+          <Card className="w-full h-[50vh] mx-auto flex flex-col justify-between">
+            <div className="flex-shrink-0 max-h-[70%] flex items-center justify-center">
+              <img
+                src={`http://openweathermap.org/img/wn/${weatherData.icon}@2x.png`}
+                alt="Weather icon"
+                className="object-contain w-full h-full"
+              />
+            </div>
+            <CardContent className="flex flex-col justify-end h-[30%] p-4">
+              <h5 className="text-lg font-semibold mb-2">{weatherData.city}</h5>
+              <p className="text-sm text-gray-500">
                 {weatherData.temperature}°C - {weatherData.weather}
-              </Typography>
+              </p>
             </CardContent>
           </Card>
         ) : (

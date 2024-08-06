@@ -1,4 +1,3 @@
-import {Drawer, List, ListItemButton, ListItemIcon, ListItemText, IconButton, Toolbar } from '@mui/material';
 import logo from "../assets/logo.png"
 import DirectionsRunOutlinedIcon from '@mui/icons-material/DirectionsRunOutlined';
 import RestaurantOutlinedIcon from '@mui/icons-material/RestaurantOutlined';
@@ -22,49 +21,40 @@ export function SideBar(){
   };
 
   return (
-    
-    <Drawer
-      variant="permanent"
-      sx={{
-        width: 240,
-        flexShrink: 0,
-        '& .MuiDrawer-paper': {
-          width: 240,
-          boxSizing: 'border-box',
-          height: '100%',
-        },
-      }}
-    >
-      <div style={{ display: 'flex', justifyContent: 'center', padding: '20px 0' }}>
-        <img src={logo} alt="Logo" style={{ height: 80 }} />
+    <div className="w-60 h-full bg-slate-800 text-white flex flex-col rounded-lg shadow-lg overflow-hidden m-2">
+      <div className="flex justify-center items-center py-5">
+        <img src={logo} alt="Logo" className="h-20" />
       </div>
-      <List sx={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      <ListItemButton sx={{ display: 'flex', alignItems: 'center', width: '80%', marginBottom: 1 }} onClick={handleNavigateToDashboard}>
-          <ListItemIcon sx={{ minWidth: 'unset', marginRight: 1 }}>
-            <AssessmentOutlinedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Dashboard" />
-        </ListItemButton>
-        <ListItemButton sx={{ display: 'flex', alignItems: 'center', width: '80%', marginBottom: 1 }} onClick={handleNavigateToActivity}>
-          <ListItemIcon sx={{ minWidth: 'unset', marginRight: 1 }}>
-            <DirectionsRunOutlinedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Minha atividade" />
-        </ListItemButton>
-        <ListItemButton sx={{ display: 'flex', alignItems: 'center', width: '80%', marginBottom: 1 }} onClick={handleNavigateToPlan}>
-          <ListItemIcon sx={{ minWidth: 'unset', marginRight: 1 }}>
-            <RestaurantOutlinedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Plano alimentar" />
-        </ListItemButton>
-        <ListItemButton sx={{ display: 'flex', alignItems: 'center', width: '80%', marginBottom: 1 }} onClick={handleNavigateToContact}>
-          <ListItemIcon sx={{ minWidth: 'unset', marginRight: 1 }}>
-            <CallIcon />
-          </ListItemIcon>
-          <ListItemText primary="Contact" />
-        </ListItemButton>
-        {/* Adicione mais itens de menu aqui */}
-      </List>
-    </Drawer>
+      <nav className="flex flex-col items-center">
+        <button
+          className="flex items-center w-4/5 py-2 px-4 hover:bg-gray-700 focus:outline-none"
+          onClick={handleNavigateToDashboard}
+        >
+          <AssessmentOutlinedIcon className="w-6 h-6 mr-3" />
+          <span>Dashboard</span>
+        </button>
+        <button
+          className="flex items-center w-4/5 py-2 px-4 hover:bg-gray-700 focus:outline-none"
+          onClick={handleNavigateToActivity}
+        >
+          <DirectionsRunOutlinedIcon className="w-6 h-6 mr-3" />
+          <span>Minha atividade</span>
+        </button>
+        <button
+          className="flex items-center w-4/5 py-2 px-4 hover:bg-gray-700 focus:outline-none"
+          onClick={handleNavigateToPlan}
+        >
+          <RestaurantOutlinedIcon  className="w-6 h-6 mr-3" />
+          <span>Plano alimentar</span>
+        </button>
+        <button
+          className="flex items-center w-4/5 py-2 px-4 hover:bg-gray-700 focus:outline-none"
+          onClick={handleNavigateToContact}
+        >
+          <CallIcon  className="w-6 h-6 mr-3" />
+          <span>Contact</span>
+        </button>
+      </nav>
+    </div>
   );
 }

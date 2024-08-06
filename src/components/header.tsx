@@ -1,15 +1,13 @@
-import { AppBar, Toolbar, Typography } from "@mui/material"
-
 
 export function Header() {
-    return (
-      <AppBar sx={{ width: `calc(100% - 240px)`, backgroundColor: '#ffffff', color: '#000000'}}>
-        <Toolbar variant="dense" sx={{ display: 'flex', justifyContent: 'center', position: 'relative' }}>
-          <Typography variant="h6" color="inherit" >
-            Athletic Guide
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    )
+  return (
+    <header className="w-full bg-slate-800 text-white  rounded-t-lg shadow-lg shadow-lg mt-2 mr-4">
+      <div className="flex justify-center items-center h-16">
+        <h1 className="text-xl font-semibold">
+          Athletic Guide
+        </h1>
+      </div>
+    </header>
+  );
   }
   

@@ -1,34 +1,41 @@
 {
   "diets": [
     {
-      "id": "68c1",
+      "id": "8930",
       "objetivo_calorico": "Aumentar massa muscular",
-      "necessidades_caloricas_diarias_para_objetivo": 2252.43,
+      "necessidades_caloricas_diarias_para_objetivo": 2386.358,
       "plano_de_refeicoes_diarias": {
         "total_de_refeicoes": 5,
-        "calorias_por_refeicao": 450
+        "calorias_por_refeicao": 477.27
       },
       "necessidades_diarias_de_macronutrientes": {
         "proteinas": "135g",
-        "carboidratos": "270g",
-        "gorduras": "45g"
+        "carboidratos": "298g",
+        "gorduras": "49g"
       },
       "exemplo_de_plano_de_refeicoes": {
         "cafe_da_manha": {
           "alimentos": [
             {
-              "nome": "Aveia",
-              "quantidade": "50g",
-              "proteina": 5,
-              "carboidrato": 31,
+              "nome": "Aveia em flocos",
+              "quantidade": "40g",
+              "proteina": 6,
+              "carboidrato": 24,
               "gordura": 2
             },
             {
-              "nome": "Ovos mexidos",
-              "quantidade": "2 unidades",
-              "proteina": 12,
-              "carboidrato": 2,
-              "gordura": 10
+              "nome": "Leite desnatado",
+              "quantidade": "200ml",
+              "proteina": 7,
+              "carboidrato": 12,
+              "gordura": 0
+            },
+            {
+              "nome": "Banana",
+              "quantidade": "1 unidade",
+              "proteina": 1.3,
+              "carboidrato": 27,
+              "gordura": 0.4
             }
           ]
         },
@@ -36,9 +43,9 @@
           "alimentos": [
             {
               "nome": "Iogurte Grego",
-              "quantidade": "100g",
+              "quantidade": "150g",
               "proteina": 10,
-              "carboidrato": 4,
+              "carboidrato": 7,
               "gordura": 2
             }
           ]
@@ -46,36 +53,36 @@
         "almoco": {
           "alimentos": [
             {
-              "nome": "Frango grelhado",
+              "nome": "Peito de Frango grelhado",
               "quantidade": "100g",
-              "proteina": 20,
+              "proteina": 26,
               "carboidrato": 0,
-              "gordura": 5
-            },
-            {
-              "nome": "Arroz integral",
-              "quantidade": "150g",
-              "proteina": 5,
-              "carboidrato": 30,
-              "gordura": 2
-            },
-            {
-              "nome": "Feijão",
-              "quantidade": "100g",
-              "proteina": 8,
-              "carboidrato": 20,
               "gordura": 1
+            },
+            {
+              "nome": "Arroz Integral cozido",
+              "quantidade": "150g",
+              "proteina": 4,
+              "carboidrato": 35,
+              "gordura": 1
+            },
+            {
+              "nome": "Brócolis cozido",
+              "quantidade": "100g",
+              "proteina": 2.8,
+              "carboidrato": 3.6,
+              "gordura": 0.3
             }
           ]
         },
         "lanche_da_tarde": {
           "alimentos": [
             {
-              "nome": "Queijo cottage",
-              "quantidade": "50g",
-              "proteina": 5,
-              "carboidrato": 2,
-              "gordura": 1
+              "nome": "Ovo cozido",
+              "quantidade": "2 unidades",
+              "proteina": 12,
+              "carboidrato": 1,
+              "gordura": 10
             }
           ]
         },
@@ -83,29 +90,30 @@
           "alimentos": [
             {
               "nome": "Salmão grelhado",
-              "quantidade": "100g",
+              "quantidade": "120g",
               "proteina": 20,
               "carboidrato": 0,
-              "gordura": 10
+              "gordura": 13
             },
             {
-              "nome": "Quinoa",
-              "quantidade": "50g",
-              "proteina": 5,
-              "carboidrato": 20,
-              "gordura": 2
+              "nome": "Batata Doce assada",
+              "quantidade": "200g",
+              "proteina": 2,
+              "carboidrato": 40,
+              "gordura": 0.1
             },
             {
-              "nome": "Brócolis cozidos",
+              "nome": "Aspargos cozidos",
               "quantidade": "100g",
-              "proteina": 3,
-              "carboidrato": 6,
-              "gordura": 1
+              "proteina": 2.2,
+              "carboidrato": 3,
+              "gordura": 0.2
             }
           ]
         }
       },
-      "email": "thiagoviniciusc33@gmail.com"
+      "email": "thiagoviniciusc33@gmail.com",
+      "nome": "Thiago "
     }
   ]
 }

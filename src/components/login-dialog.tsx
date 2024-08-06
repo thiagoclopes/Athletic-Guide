@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Button } from './ui/button';
+import { Label } from './ui/label';
+import { Input } from './ui/input';
 
 export function FormDialog() {
   const navigate = useNavigate();
@@ -46,43 +52,52 @@ export function FormDialog() {
         };
 
 
-  return (
-    <React.Fragment>
-      <Button sx={{width: '20vw'}} variant="outlined" onClick={handleClickOpen}>
-        Fazer login
-      </Button>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        PaperProps={{
-          component: 'form',
-          onSubmit: handleSubmit,
-        }}
-      >
-        <DialogTitle>Acesso ao plano </DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            Digite o seu email para acessar o seu progresso.
-          </DialogContentText>
-          <TextField
-            autoFocus
-            required
-            margin="dense"
-            id="email"
-            name="email"
-            label="Email Address"
-            type="email"
-            fullWidth
-            variant="standard"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Fechar</Button>
-          <Button type="submit">Entrar</Button>
-        </DialogActions>
-      </Dialog>
-    </React.Fragment>
-  );
+        return (
+          <div>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" variant="outline" onClick={handleClickOpen}>
+                  Fazer login
+                </Button>
+              </DialogTrigger>
+      
+              <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                  <DialogTitle>Acesso ao plano</DialogTitle>
+                  <DialogDescription>
+                    Digite o seu email para acessar o seu progresso.
+                  </DialogDescription>
+                </DialogHeader>
+                
+                <form onSubmit={handleSubmit}>
+                  <div className="grid gap-4 py-4">
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="email" className="text-right">
+                        Email
+                      </Label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        className="col-span-3"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                    </div>
+                  </div>
+      
+                  <DialogFooter>
+                    <Button type="button" onClick={handleClose}>
+                      Fechar
+                    </Button>
+                    <Button type="submit">
+                      Entrar
+                    </Button>
+                  </DialogFooter>
+                </form>
+              </DialogContent>
+            </Dialog>
+          </div>
+        );
 }

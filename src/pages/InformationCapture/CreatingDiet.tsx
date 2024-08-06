@@ -22,6 +22,7 @@ export interface QuestionnaireData {
   export type RefeicaoTipo = 'cafe_da_manha' | 'lanche_da_manha' | 'almoco' | 'lanche_da_tarde' | 'jantar';
 
 export interface DietDataProps {
+  nome?: string;
   email?: string;
   objetivo_calorico: string;
   necessidades_caloricas_diarias_para_objetivo: number;
@@ -51,7 +52,6 @@ export interface DietDataProps {
   
   
   export async function createDiet(data: QuestionnaireData): Promise<DietDataProps> {
-    console.log("data: "+data.activity_level)
     const { name, email, age, gender, weight, height, training_goal, activity_level, medical_condition, allergies, dietary_restrictions, meal_frequency, current_training_plan, training_frequency_duration } = data;
     const imc = weight / ((height / 100) ** 2);
     const tmb = Number(88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age))
@@ -137,6 +137,7 @@ export interface DietDataProps {
         const diet: DietDataProps = JSON.parse(response.data.choices[0].message.content);
         console.log(diet)
         diet.email = email
+        diet.nome = name
         console.log(diet)
 
         if (!diet) {

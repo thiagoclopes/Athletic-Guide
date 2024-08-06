@@ -3,15 +3,15 @@ import { SideBar } from "../../components/drawer";
 import { Header } from "../../components/header";
 
 export function AppLayout() {
-    return(
-    <div className="App" style={{ display: 'flex', flexDirection: 'row', height: '100vh' }}>
+    return (
+      <div className="App flex flex-row h-screen">
         <SideBar />
-        <div style={{flex: 1, display: 'flex', flexDirection: 'column'}}>
-            <Header />
-            <div style={{ flex: 1, overflow: 'auto', paddingTop: '48px' }}>
+        <div className="flex flex-col flex-1 mr-2">
+          <Header />
+          <div className="flex-1 overflow-auto pt-4">
             <Outlet />
-            </div>
+          </div>
         </div>
-    </div>
-    )
-}
+      </div>
+    );
+  }

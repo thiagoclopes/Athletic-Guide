@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import { Box, Typography, Button } from '@mui/material';
 import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
 import { FormDialog } from '../components/login-dialog';
+import { Button } from '@/components/ui/button';
+import { Dialog } from '@/components/ui/dialog';
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -11,30 +12,21 @@ export const Home = () => {
   }
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100vh',
-        padding: 2,
-      }}
-    >
-      <Typography variant="h2" gutterBottom sx={{textAlign: 'center', paddingLeft: '81px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+    <div className="flex flex-col items-center justify-center h-screen p-2">
+      <h2 className="text-4xl font-bold text-center flex items-center justify-center mb-8">
         Bem-vindo ao Athletic Guide!
-        <RocketLaunchOutlinedIcon sx={{ fontSize: 'inherit', marginLeft: '8px' }}/>
-      </Typography>
-      <Typography variant="h6" gutterBottom sx={{textAlign: 'center', width: '70%', marginBottom: '4vh'}}>
+        <RocketLaunchOutlinedIcon style={{ fontSize: 'inherit', marginLeft: '8px' }} />
+      </h2>
+      <p className="text-lg text-center w-3/4 mb-4">
         Sua jornada para atingir o auge do desempenho começa agora. Registre seus dados e dê o primeiro passo rumo às suas melhores conquistas. Vamos juntos transformar seus objetivos em resultados extraordinários!
-      </Typography>
-      <Box sx={{display: 'flex', gap:2}}>
-        <Button sx={{width: '20vw'}} variant="contained" color="primary" onClick={handleNavigateToRegistration}>
+      </p>
+      <div className="flex gap-2">
+        <Button size="lg" variant="customDarkBlue" onClick={handleNavigateToRegistration}>
           Registrar Dados
         </Button>
         <FormDialog />
-      </Box>
-
-    </Box>
+        <Dialog />
+      </div>
+    </div>
   );
 };

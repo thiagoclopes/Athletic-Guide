@@ -1,6 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent } from './ui/card';
 const data = [
     { name: 'Semana 1', weight: 70, goal: 68 },
     { name: 'Semana 2', weight: 69.5, goal: 68 },
@@ -22,28 +21,26 @@ export function WeightChart() {
   const maxWeight = Math.max(...data.map(d => d.weight));
 
   return (
-    <Card sx={{ width: '100%', height: '100%' }}>
-        <CardContent sx={{ height: '40vh', display: 'flex', flexDirection: 'column' }}>
-            <Typography variant="h6" sx={{ marginBottom: 2 }}>
-                Progresso Mensal
-            </Typography>
-            <div style={{ flexGrow: 1 }}>
-                <ResponsiveContainer width="90%" height="100%">
-                    <LineChart data={data}>
-                        <Legend
-                            verticalAlign="top"
-                            align="left"
-                            wrapperStyle={{ paddingBottom: 20 }}
-                        />
-                        <XAxis dataKey="name" />
-                        <YAxis domain={[minWeight - 1, maxWeight + 1]} tickCount={5} />
-                        <Tooltip />
-                        <Line dataKey="weight" stroke="#8884d8"  dot={false} />
-                        <Line dataKey="goal" stroke="#82ca9d"  dot={false} />
-                    </LineChart>
-                </ResponsiveContainer>
-            </div>
-        </CardContent>
+    <Card className="w-full h-full">
+      <CardContent className="h-[50vh] flex flex-col p-4">
+        <h6 className="text-lg font-semibold mb-4">Progresso Mensal</h6>
+        <div className="flex-grow">
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={data}>
+              <Legend
+                verticalAlign="top"
+                align="left"
+                wrapperStyle={{ paddingBottom: 20 }}
+              />
+              <XAxis dataKey="name" />
+              <YAxis domain={[minWeight - 1, maxWeight + 1]} tickCount={5} />
+              <Tooltip />
+              <Line dataKey="weight" stroke="#8884d8" dot={false} />
+              <Line dataKey="goal" stroke="#82ca9d" dot={false} />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      </CardContent>
     </Card>
-);
+  );
 }
