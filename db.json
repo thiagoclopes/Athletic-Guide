@@ -1,41 +1,34 @@
 {
   "diets": [
     {
-      "id": "8930",
-      "objetivo_calorico": "Aumentar massa muscular",
-      "necessidades_caloricas_diarias_para_objetivo": 2386.358,
+      "id": "af03",
+      "objetivo_calorico": "Calorias necessárias para ganhar massa muscular",
+      "necessidades_caloricas_diarias_para_objetivo": 3200,
       "plano_de_refeicoes_diarias": {
         "total_de_refeicoes": 5,
-        "calorias_por_refeicao": 477.27
+        "calorias_por_refeicao": 640
       },
       "necessidades_diarias_de_macronutrientes": {
-        "proteinas": "135g",
-        "carboidratos": "298g",
-        "gorduras": "49g"
+        "proteinas": "255g",
+        "carboidratos": "384g",
+        "gorduras": "85g"
       },
       "exemplo_de_plano_de_refeicoes": {
         "cafe_da_manha": {
           "alimentos": [
             {
-              "nome": "Aveia em flocos",
-              "quantidade": "40g",
-              "proteina": 6,
-              "carboidrato": 24,
-              "gordura": 2
+              "nome": "Aveia",
+              "quantidade": "50g",
+              "proteina": 5,
+              "carboidrato": 30,
+              "gordura": 3
             },
             {
-              "nome": "Leite desnatado",
-              "quantidade": "200ml",
-              "proteina": 7,
-              "carboidrato": 12,
-              "gordura": 0
-            },
-            {
-              "nome": "Banana",
-              "quantidade": "1 unidade",
-              "proteina": 1.3,
-              "carboidrato": 27,
-              "gordura": 0.4
+              "nome": "Ovos",
+              "quantidade": "3 Unidades",
+              "proteina": 18,
+              "carboidrato": 1,
+              "gordura": 15
             }
           ]
         },
@@ -43,45 +36,52 @@
           "alimentos": [
             {
               "nome": "Iogurte Grego",
-              "quantidade": "150g",
-              "proteina": 10,
-              "carboidrato": 7,
-              "gordura": 2
+              "quantidade": "200g",
+              "proteina": 20,
+              "carboidrato": 10,
+              "gordura": 5
             }
           ]
         },
         "almoco": {
           "alimentos": [
             {
-              "nome": "Peito de Frango grelhado",
-              "quantidade": "100g",
-              "proteina": 26,
-              "carboidrato": 0,
-              "gordura": 1
-            },
-            {
-              "nome": "Arroz Integral cozido",
+              "nome": "Peito de Frango Grelhado",
               "quantidade": "150g",
-              "proteina": 4,
-              "carboidrato": 35,
-              "gordura": 1
+              "proteina": 30,
+              "carboidrato": 0,
+              "gordura": 5
             },
             {
-              "nome": "Brócolis cozido",
+              "nome": "Arroz Integral",
               "quantidade": "100g",
-              "proteina": 2.8,
-              "carboidrato": 3.6,
-              "gordura": 0.3
+              "proteina": 5,
+              "carboidrato": 30,
+              "gordura": 2
+            },
+            {
+              "nome": "Brócolis Cozidos",
+              "quantidade": "100g",
+              "proteina": 3,
+              "carboidrato": 5,
+              "gordura": 0.4
             }
           ]
         },
         "lanche_da_tarde": {
           "alimentos": [
             {
-              "nome": "Ovo cozido",
-              "quantidade": "2 unidades",
-              "proteina": 12,
-              "carboidrato": 1,
+              "nome": "Banana",
+              "quantidade": "1 Unidade",
+              "proteina": 1,
+              "carboidrato": 25,
+              "gordura": 0.4
+            },
+            {
+              "nome": "Manteiga de Amendoim",
+              "quantidade": "20g",
+              "proteina": 4,
+              "carboidrato": 5,
               "gordura": 10
             }
           ]
@@ -89,31 +89,261 @@
         "jantar": {
           "alimentos": [
             {
-              "nome": "Salmão grelhado",
-              "quantidade": "120g",
-              "proteina": 20,
+              "nome": "Salmão Assado",
+              "quantidade": "150g",
+              "proteina": 25,
               "carboidrato": 0,
-              "gordura": 13
+              "gordura": 10
             },
             {
-              "nome": "Batata Doce assada",
-              "quantidade": "200g",
+              "nome": "Batata Doce Cozida",
+              "quantidade": "150g",
               "proteina": 2,
-              "carboidrato": 40,
-              "gordura": 0.1
+              "carboidrato": 30,
+              "gordura": 0.4
             },
             {
-              "nome": "Aspargos cozidos",
+              "nome": "Aspargos Grelhados",
               "quantidade": "100g",
-              "proteina": 2.2,
-              "carboidrato": 3,
+              "proteina": 2,
+              "carboidrato": 4,
               "gordura": 0.2
             }
           ]
         }
       },
       "email": "thiagoviniciusc33@gmail.com",
-      "nome": "Thiago "
+      "nome": "Thiago Lopes"
+    },
+    {
+      "id": "7d7c",
+      "objetivo_calorico": "Hipercalórico",
+      "necessidades_caloricas_diarias_para_objetivo": 3683,
+      "plano_de_refeicoes_diarias": {
+        "total_de_refeicoes": 5,
+        "calorias_por_refeicao": 737
+      },
+      "necessidades_diarias_de_macronutrientes": {
+        "proteinas": "285g",
+        "carboidratos": "461g",
+        "gorduras": "68g"
+      },
+      "exemplo_de_plano_de_refeicoes": {
+        "cafe_da_manha": {
+          "alimentos": [
+            {
+              "nome": "Aveia em flocos",
+              "quantidade": "50g",
+              "proteina": "6g",
+              "carboidrato": "31g",
+              "gordura": "3g"
+            },
+            {
+              "nome": "Ovos mexidos",
+              "quantidade": "3 unidades",
+              "proteina": "18g",
+              "carboidrato": "3g",
+              "gordura": "15g"
+            }
+          ]
+        },
+        "lanche_da_manha": {
+          "alimentos": [
+            {
+              "nome": "Iogurte Grego",
+              "quantidade": "200g",
+              "proteina": "14g",
+              "carboidrato": "8g",
+              "gordura": "6g"
+            },
+            {
+              "nome": "Amendoim",
+              "quantidade": "30g",
+              "proteina": "7g",
+              "carboidrato": "5g",
+              "gordura": "14g"
+            }
+          ]
+        },
+        "almoco": {
+          "alimentos": [
+            {
+              "nome": "Frango grelhado",
+              "quantidade": "200g",
+              "proteina": "44g",
+              "carboidrato": "0g",
+              "gordura": "8g"
+            },
+            {
+              "nome": "Arroz integral",
+              "quantidade": "100g",
+              "proteina": "7g",
+              "carboidrato": "77g",
+              "gordura": "2g"
+            },
+            {
+              "nome": "Brócolis refogado",
+              "quantidade": "100g",
+              "proteina": "4g",
+              "carboidrato": "2g",
+              "gordura": "1g"
+            }
+          ]
+        },
+        "lanche_da_tarde": {
+          "alimentos": [
+            {
+              "nome": "Batata Doce cozida",
+              "quantidade": "150g",
+              "proteina": "2g",
+              "carboidrato": "45g",
+              "gordura": "0g"
+            },
+            {
+              "nome": "Peito de Peru defumado",
+              "quantidade": "50g",
+              "proteina": "12g",
+              "carboidrato": "0g",
+              "gordura": "1g"
+            }
+          ]
+        },
+        "jantar": {
+          "alimentos": [
+            {
+              "nome": "Salmão grelhado",
+              "quantidade": "150g",
+              "proteina": "33g",
+              "carboidrato": "0g",
+              "gordura": "15g"
+            },
+            {
+              "nome": "Quinoa cozida",
+              "quantidade": "100g",
+              "proteina": "4g",
+              "carboidrato": "21g",
+              "gordura": "2g"
+            },
+            {
+              "nome": "Abóbora assada",
+              "quantidade": "150g",
+              "proteina": "2g",
+              "carboidrato": "9g",
+              "gordura": "0g"
+            }
+          ]
+        }
+      },
+      "email": "thiagofofdod",
+      "nome": "oi"
+    },
+    {
+      "id": "1eed",
+      "objetivo_calorico": "Hipercalórico",
+      "necessidades_caloricas_diarias_para_objetivo": 3046.1952,
+      "plano_de_refeicoes_diarias": {
+        "total_de_refeicoes": 5,
+        "calorias_por_refeicao": 609.24
+      },
+      "necessidades_diarias_de_macronutrientes": {
+        "proteinas": "212g",
+        "carboidratos": "387g",
+        "gorduras": "68g"
+      },
+      "exemplo_de_plano_de_refeicoes": {
+        "cafe_da_manha": {
+          "alimentos": [
+            {
+              "nome": "Aveia",
+              "quantidade": "50g",
+              "proteina": 6,
+              "carboidrato": 27,
+              "gordura": 3
+            },
+            {
+              "nome": "Ovos mexidos",
+              "quantidade": "2 Unidades",
+              "proteina": 12,
+              "carboidrato": 2,
+              "gordura": 10
+            }
+          ]
+        },
+        "lanche_da_manha": {
+          "alimentos": [
+            {
+              "nome": "Iogurte grego",
+              "quantidade": "150g",
+              "proteina": 10,
+              "carboidrato": 6,
+              "gordura": 3
+            }
+          ]
+        },
+        "almoco": {
+          "alimentos": [
+            {
+              "nome": "Frango grelhado",
+              "quantidade": "150g",
+              "proteina": 32,
+              "carboidrato": 0,
+              "gordura": 3
+            },
+            {
+              "nome": "Arroz integral",
+              "quantidade": "100g",
+              "proteina": 3,
+              "carboidrato": 22,
+              "gordura": 1
+            },
+            {
+              "nome": "Brócolis cozido",
+              "quantidade": "100g",
+              "proteina": 3,
+              "carboidrato": 6,
+              "gordura": 0
+            }
+          ]
+        },
+        "lanche_da_tarde": {
+          "alimentos": [
+            {
+              "nome": "Banana",
+              "quantidade": "1 Unidade",
+              "proteina": 1,
+              "carboidrato": 27,
+              "gordura": 0
+            }
+          ]
+        },
+        "jantar": {
+          "alimentos": [
+            {
+              "nome": "Salmão grelhado",
+              "quantidade": "150g",
+              "proteina": 20,
+              "carboidrato": 0,
+              "gordura": 12
+            },
+            {
+              "nome": "Batata doce assada",
+              "quantidade": "150g",
+              "proteina": 2,
+              "carboidrato": 31,
+              "gordura": 0
+            },
+            {
+              "nome": "Aspargos grelhados",
+              "quantidade": "100g",
+              "proteina": 2,
+              "carboidrato": 3,
+              "gordura": 0
+            }
+          ]
+        }
+      },
+      "email": "thiagoviniciusc33@gmail.com",
+      "nome": "thiago lopes"
     }
   ]
 }

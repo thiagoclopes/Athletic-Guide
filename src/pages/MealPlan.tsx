@@ -3,6 +3,9 @@ import axios from "axios";
 import { DietDataProps } from "./InformationCapture/CreatingDiet";
 import { useLocation } from "react-router-dom";
 import { MealPlanTable } from "../components/mealplan-table";
+import { Card, CardFooter, CardTitle } from "@/components/ui/card";
+import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import { Button } from "@/components/ui/button";
 
 export function MealPlan() {
   const [diet, setDiet] = useState<DietDataProps>({
@@ -36,14 +39,16 @@ export function MealPlan() {
 
   useEffect(() => {
     const fetchDietData = async () => {
-      if (!email) {
-        console.error('Email não fornecido na URL');
+      const cachedEmail = localStorage.getItem('email') || email;
+
+      if (!cachedEmail) {
+        console.error('Email não fornecido na URL ou no cache');
         return;
       }
 
       try {
         const response = await axios.get(`http://localhost:3000/diets`, {
-          params: { email }
+          params: { email: cachedEmail }
         });
         console.log('Dados recebidos da API:', response.data);
         setDiet(response.data[0]);
@@ -61,26 +66,111 @@ export function MealPlan() {
   const afternoonsnackItems = diet.exemplo_de_plano_de_refeicoes.lanche_da_tarde.alimentos;
   const dinnerItems = diet.exemplo_de_plano_de_refeicoes.jantar.alimentos;
   const nome = diet.nome;
+
+  const textStyle = {
+    color: 'white',
+    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)'
+  };
+
   return (
-    <div>
-      <div style={{margin:'auto'}}>
-        <h2 className="text-2xl font-bold justify-center">
-          Olá { nome }, este é o seu Plano de Alimentação
-        </h2>
-        <h2>Objetivo Calórico</h2>
-        <p>{diet.objetivo_calorico}</p>
+    <div className="min-h-screen flex flex-col">
+      <div className="h-[calc(100vh-5rem)] flex flex-col justify-between">
+        <div className="p-4">
+          <h2 className="text-2xl font-bold text-center">
+            Olá, { nome}! Este é o seu Plano de Alimentação.
+          </h2>
+          <h2>Objetivo Calórico</h2>
+          <p>{diet.objetivo_calorico}</p>
 
-        <h2>Necessidades Calóricas Diárias para Objetivo</h2>
-        <p>{diet.necessidades_caloricas_diarias_para_objetivo} calorias</p>
+          <h2>Necessidades Calóricas Diárias para Objetivo</h2>
+          <p>{diet.necessidades_caloricas_diarias_para_objetivo} calorias</p>
 
-        <h2>Plano de Refeições Diárias</h2>
-        <p>Total de Refeições: {diet.plano_de_refeicoes_diarias.total_de_refeicoes}</p>
-        <p>Calorias por Refeição: {diet.plano_de_refeicoes_diarias.calorias_por_refeicao}</p>
+          <h2>Plano de Refeições Diárias</h2>
+          <p>Total de Refeições: {diet.plano_de_refeicoes_diarias.total_de_refeicoes}</p>
+          <p>Calorias por Refeição: {diet.plano_de_refeicoes_diarias.calorias_por_refeicao}</p>
 
-        <h2>Necessidades Diárias de Macronutrientes</h2>
-        <p>Proteínas: {diet.necessidades_diarias_de_macronutrientes.proteinas}</p>
-        <p>Carboidratos: {diet.necessidades_diarias_de_macronutrientes.carboidratos}</p>
-        <p>Gorduras: {diet.necessidades_diarias_de_macronutrientes.gorduras}</p>
+          <h2>Necessidades Diárias de Macronutrientes</h2>
+          <p>Proteínas: {diet.necessidades_diarias_de_macronutrientes.proteinas}</p>
+          <p>Carboidratos: {diet.necessidades_diarias_de_macronutrientes.carboidratos}</p>
+          <p>Gorduras: {diet.necessidades_diarias_de_macronutrientes.gorduras}</p>
+        </div>
+
+        <Button className="mt-4 mb-8" onClick={() => {
+          const element = document.getElementById('mealplan');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}>
+          <ArrowCircleDownIcon />
+        </Button>
+      </div>
+
+      <div id='mealplan' className="flex flex-row gap-5  items-center justify-center mb-5">
+        <Card className="relative w-[250px] h-[45vh] transition-transform duration-300 hover:scale-105" >
+          <div className="absolute inset-0">
+            <img
+              src="https://blog.samisaude.com.br/wp-content/uploads/2023/01/high-angle-table-full-of-delicious-food-arrangement-1.jpg"
+              alt="Imagem do Card"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <CardFooter className="absolute bottom-0 left-0 w-full flex justify-between z-10">
+            <span className="font-semibold" style={textStyle}>Café da Manhã</span>
+          </CardFooter>
+        </Card>
+
+        <Card className="relative w-[250px] h-[45vh] transition-transform duration-300 hover:scale-105">
+          <div className="absolute inset-0">
+            <img
+              src="https://blog.bodytech.com.br/wp-content/uploads/2018/10/alimentos_falsos_saudaveis.jpg"
+              alt="Imagem do Card"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <CardFooter className="absolute bottom-0 left-0 w-full flex justify-between z-10">
+            <span className="font-semibold" style={textStyle}>Lanche da Manhã</span>
+          </CardFooter>
+        </Card>
+
+        <Card className="relative w-[250px] h-[45vh] transition-transform duration-300 hover:scale-105">
+          <div className="absolute inset-0">
+            <img
+              src="https://imagens-revista.vivadecora.com.br/uploads/2022/03/ideias-de-almoco-de-domingo-simples-e-rapido-de-fazer-Foto-iStock.jpg"
+              alt="Imagem do Card"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <CardFooter className="absolute bottom-0 left-0 w-full flex justify-between z-10">
+            <span className="font-semibold" style={textStyle}>Almoço</span>
+          </CardFooter>
+        </Card>
+      </div>
+      <div className="flex flex-row gap-5 items-center justify-center">
+        <Card className="relative w-[250px] h-[45vh] transition-transform duration-300 hover:scale-105">
+          <div className="absolute inset-0">
+            <img
+              src="https://runfun.com.br/runfun2021/wp-content/uploads/2020/04/lanche-da-tarde.jpg"
+              alt="Imagem do Card"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <CardFooter className="absolute bottom-0 left-0 w-full flex justify-between z-10">
+           <span className="font-semibold" style={textStyle}>Lanche da Tarde</span>
+          </CardFooter>
+        </Card>
+
+        <Card className="relative w-[250px] h-[45vh] transition-transform duration-300 hover:scale-105">
+          <div className="absolute inset-0">
+            <img
+              src="https://areademulher.r7.com/wp-content/uploads/2020/10/jantar-rapido-melhores-receitas-para-fazer-em-casa-2-1200x900.jpg"
+              alt="Imagem do Card"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <CardFooter className="absolute bottom-0 left-0 w-full flex justify-between z-10">
+            <span className="font-semibold" style={textStyle}>Janta</span>
+          </CardFooter>
+        </Card>
       </div>
 
       <MealPlanTable foodItems={breakfastItems} title="Café da manhã" />

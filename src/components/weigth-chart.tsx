@@ -21,7 +21,7 @@ export function WeightChart() {
   const maxWeight = Math.max(...data.map(d => d.weight));
 
   return (
-    <Card className="w-full h-full">
+    <Card className="w-full">
       <CardContent className="h-[50vh] flex flex-col p-4">
         <h6 className="text-lg font-semibold mb-4">Progresso Mensal</h6>
         <div className="flex-grow">

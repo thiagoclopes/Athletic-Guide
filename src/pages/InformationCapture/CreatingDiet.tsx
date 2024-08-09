@@ -1,25 +1,21 @@
 import axios from "axios";
 
 export interface QuestionnaireData {
-    name: string;
-    email: string;
-    age: number;
-    gender: string;
-    weight: number;
-    height: number;
-    training_goal: string;
-    activity_level: string;
-    medical_condition: string;
-    allergies: string;
-    dietary_restrictions: string;
-    meal_frequency: number;
-    current_training_plan: string;
-    training_frequency_duration: string;
+  name: string;
+  email: string;
+  phone: string;
+  gender: string;
+  ageValue: number[];
+  weight: string;
+  height: number[];
+  trainingGoal: string;
+  activityLevel: string;
+  medicalCondition: string;
+  foodAllergy: string;
+  trainingFrequency: string;
   }
-  
-  
 
-  export type RefeicaoTipo = 'cafe_da_manha' | 'lanche_da_manha' | 'almoco' | 'lanche_da_tarde' | 'jantar';
+export type RefeicaoTipo = 'cafe_da_manha' | 'lanche_da_manha' | 'almoco' | 'lanche_da_tarde' | 'jantar';
 
 export interface DietDataProps {
   nome?: string;
@@ -51,10 +47,10 @@ export interface DietDataProps {
 
   
   
-  export async function createDiet(data: QuestionnaireData): Promise<DietDataProps> {
-    const { name, email, age, gender, weight, height, training_goal, activity_level, medical_condition, allergies, dietary_restrictions, meal_frequency, current_training_plan, training_frequency_duration } = data;
-    const imc = weight / ((height / 100) ** 2);
-    const tmb = Number(88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age))
+  export async function createDiet(data: QuestionnaireData) {
+    const { name, email, ageValue, gender, weight, height, trainingGoal, activityLevel, medicalCondition, foodAllergy, trainingFrequency } = data;
+    const imc = Number(weight) / ((Number(height) / 100) ** 2);
+    const tmb = Number(88.362 + (13.397 * Number(weight)) + (4.799 * Number(height)) - (5.677 * Number(ageValue)))
     
     try {
         const response = await axios.post(
@@ -71,20 +67,17 @@ export interface DietDataProps {
                 content: `
                   Preencha o JSON abaixo com uma dieta personalizada para o seguinte indivíduo:
   
-                  Idade: ${age}
+                  Idade: ${ageValue}
                   Sexo: ${gender}
                   Peso: ${weight} kg
                   Altura: ${height} cm
                   Taxa Metabólica Basal: ${tmb}
                   Índice de massa corporal: ${imc}
-                  Objetivo de treinamento: ${training_goal}
-                  Nível de Atividade Física: ${activity_level}
-                  Condição de Saúde?: ${medical_condition}
-                  Alergia?: ${allergies}
-                  Restrições Alimentares?: ${dietary_restrictions}
-                  Frequência de refeições por dia: ${meal_frequency}
-                  Plano de treinamento atual?: ${current_training_plan}
-                  Frequência e duração de treinos: ${training_frequency_duration}
+                  Objetivo de treinamento: ${trainingGoal}
+                  Nível de Atividade Física: ${activityLevel}
+                  Condição de Saúde?: ${medicalCondition}
+                  Alergia?: ${foodAllergy}
+                  Frequência e duração de treinos: ${trainingFrequency}
   
                   JSON:
                   {
