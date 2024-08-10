@@ -106,6 +106,7 @@ export function MealPlan() {
       </div>
 
       <div id='mealplan' className="flex flex-row gap-5  items-center justify-center mb-5">
+<<<<<<< HEAD
         <MealCard url="https://blog.samisaude.com.br/wp-content/uploads/2023/01/high-angle-table-full-of-delicious-food-arrangement-1.jpg" foodItems={breakfastItems}/>
         <MealCard url="https://blog.bodytech.com.br/wp-content/uploads/2018/10/alimentos_falsos_saudaveis.jpg" foodItems={morningsnackItems}/>
         <MealCard url="https://imagens-revista.vivadecora.com.br/uploads/2022/03/ideias-de-almoco-de-domingo-simples-e-rapido-de-fazer-Foto-iStock.jpg" foodItems={lunchItems}/>
@@ -113,6 +114,86 @@ export function MealPlan() {
       <div className="flex flex-row gap-5 items-center justify-center">
         <MealCard url="https://runfun.com.br/runfun2021/wp-content/uploads/2020/04/lanche-da-tarde.jpg" foodItems={afternoonsnackItems}/>
         <MealCard url="https://areademulher.r7.com/wp-content/uploads/2020/10/jantar-rapido-melhores-receitas-para-fazer-em-casa-2-1200x900.jpg" foodItems={dinnerItems}/>
+=======
+        <Card className="relative w-[320px] h-[45vh] transition-transform duration-300 hover:scale-105 cursor:pointer"  >
+          <div className="absolute inset-0">
+            <img
+              src="https://blog.samisaude.com.br/wp-content/uploads/2023/01/high-angle-table-full-of-delicious-food-arrangement-1.jpg"
+              alt="Imagem do Card"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <CardFooter className="absolute bottom-0 left-0 w-full flex justify-between z-10">
+            <span className="font-semibold" style={textStyle}>Café da Manhã</span>
+          </CardFooter>
+        </Card>
+
+        <Card className="relative w-[320px] h-[45vh] transition-transform duration-300 hover:scale-105 cursor:pointer" >
+          <div className="absolute inset-0">
+            <img
+              src="https://blog.bodytech.com.br/wp-content/uploads/2018/10/alimentos_falsos_saudaveis.jpg"
+              alt="Imagem do Card"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <CardFooter className="absolute bottom-0 left-0 w-full flex justify-between z-10">
+            <span className="font-semibold" style={textStyle}>Lanche da Manhã</span>
+          </CardFooter>
+        </Card>
+
+        <Card className="relative w-[320px] h-[45vh] transition-transform duration-300 hover:scale-105 cursor:pointer" >
+          <div className="absolute inset-0">
+            <img
+              src="https://imagens-revista.vivadecora.com.br/uploads/2022/03/ideias-de-almoco-de-domingo-simples-e-rapido-de-fazer-Foto-iStock.jpg"
+              alt="Imagem do Card"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <CardFooter className="absolute bottom-0 left-0 w-full flex justify-between z-10">
+            <span className="font-semibold" style={textStyle}>Almoço</span>
+          </CardFooter>
+        </Card>
+      </div>
+      <div className="flex flex-row gap-5 items-center justify-center">
+        <Card className="relative w-[320px] h-[45vh] transition-transform duration-300 hover:scale-105 cursor:pointer" >
+          <div className="absolute inset-0">
+            <img
+              src="https://runfun.com.br/runfun2021/wp-content/uploads/2020/04/lanche-da-tarde.jpg"
+              alt="Imagem do Card"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <CardFooter className="absolute bottom-0 left-0 w-full flex justify-between z-10">
+           <span className="font-semibold" style={textStyle}>Lanche da Tarde</span>
+          </CardFooter>
+        </Card>
+
+        <Card className="relative w-[320px] h-[45vh] transition-transform duration-300 hover:scale-105 cursor:pointer" >
+          <div className="absolute inset-0">
+            <img
+              src="https://areademulher.r7.com/wp-content/uploads/2020/10/jantar-rapido-melhores-receitas-para-fazer-em-casa-2-1200x900.jpg"
+              alt="Imagem do Card"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <CardFooter className="absolute bottom-0 left-0 w-full flex justify-between z-10">
+            <span className="font-semibold" style={textStyle}>Janta</span>
+          </CardFooter>
+        </Card>
+
+        <Card className="relative w-[320px] h-[45vh] transition-transform duration-300 hover:scale-105 cursor:pointer" >
+          <div className="absolute inset-0">
+            <img
+              src="https://img.freepik.com/fotos-gratis/eucaristia-com-calice-de-vinho-e-uvas_23-2149381627.jpg"
+              alt="Imagem do Card"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <CardFooter className="absolute bottom-0 left-0 w-full flex justify-between z-10">
+            <span className="font-semibold" style={textStyle}>Ceia</span>
+          </CardFooter>
+        </Card>
+>>>>>>> c6ab8f03a0ef60abd8364f05bbb5f9e724eeb7d9
       </div>
 
     </div>
