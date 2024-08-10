@@ -1,17 +1,17 @@
 {
   "diets": [
     {
-      "id": "c972",
+      "id": "6f60",
       "objetivo_calorico": "Ganhar massa muscular",
-      "necessidades_caloricas_diarias_para_objetivo": 3050,
+      "necessidades_caloricas_diarias_para_objetivo": 3053.008,
       "plano_de_refeicoes_diarias": {
         "total_de_refeicoes": 6,
-        "calorias_por_refeicao": 508
+        "calorias_por_refeicao": 509
       },
       "necessidades_diarias_de_macronutrientes": {
-        "proteinas": 213,
-        "carboidratos": 384,
-        "gorduras": 85
+        "proteinas": "213g",
+        "carboidratos": "384g",
+        "gorduras": "57g"
       },
       "exemplo_de_plano_de_refeicoes": {
         "cafe_da_manha": {
@@ -19,23 +19,16 @@
             {
               "nome": "Aveia",
               "quantidade": "50g",
-              "proteina": 6,
-              "carboidrato": 34,
+              "proteina": 7,
+              "carboidrato": 35,
               "gordura": 2
             },
             {
-              "nome": "Banana",
-              "quantidade": "1 Unidade",
-              "proteina": 1,
-              "carboidrato": 27,
-              "gordura": 0
-            },
-            {
-              "nome": "Ovos mexidos",
-              "quantidade": "2 Unidades",
-              "proteina": 13,
-              "carboidrato": 2,
-              "gordura": 11
+              "nome": "Leite Integral",
+              "quantidade": "200ml",
+              "proteina": 7,
+              "carboidrato": 10,
+              "gordura": 8
             }
           ]
         },
@@ -45,7 +38,7 @@
               "nome": "Iogurte Grego",
               "quantidade": "150g",
               "proteina": 10,
-              "carboidrato": 6,
+              "carboidrato": 8,
               "gordura": 5
             }
           ]
@@ -63,66 +56,195 @@
               "nome": "Arroz Integral",
               "quantidade": "100g",
               "proteina": 3,
-              "carboidrato": 77,
+              "carboidrato": 30,
               "gordura": 1
             },
             {
               "nome": "Brócolis Cozidos",
               "quantidade": "100g",
               "proteina": 3,
-              "carboidrato": 4,
-              "gordura": 0
+              "carboidrato": 5,
+              "gordura": 0.4
             }
           ]
         },
         "lanche_da_tarde": {
           "alimentos": [
             {
-              "nome": "Manteiga de Amendoim",
-              "quantidade": "2 colheres de sopa",
-              "proteina": 8,
-              "carboidrato": 6,
-              "gordura": 16
+              "nome": "Banana",
+              "quantidade": "1 unidade",
+              "proteina": 1,
+              "carboidrato": 30,
+              "gordura": 0
             }
           ]
         },
         "jantar": {
           "alimentos": [
             {
-              "nome": "Salmão Assado",
+              "nome": "Salmão Grelhado",
               "quantidade": "150g",
-              "proteina": 24,
+              "proteina": 20,
               "carboidrato": 0,
-              "gordura": 10
+              "gordura": 8
             },
             {
               "nome": "Batata Doce Cozida",
               "quantidade": "150g",
               "proteina": 2,
-              "carboidrato": 27,
-              "gordura": 0
+              "carboidrato": 35,
+              "gordura": 0.2
             },
             {
-              "nome": "Espinafre Refogado",
+              "nome": "Aspargos Grelhados",
               "quantidade": "100g",
-              "proteina": 3,
-              "carboidrato": 3,
-              "gordura": 1
+              "proteina": 2,
+              "carboidrato": 4,
+              "gordura": 0
             }
           ]
         },
         "ceia": {
           "alimentos": [
             {
-              "nome": "Queijo Cottage",
-              "quantidade": "100g",
-              "proteina": 11,
-              "carboidrato": 3,
-              "gordura": 2
+              "nome": "Claras de Ovo",
+              "quantidade": "3 unidades",
+              "proteina": 18,
+              "carboidrato": 1,
+              "gordura": 0
             }
           ]
         }
       },
+      "email": "thiagoviniciusc33@gmail.com",
+      "nome": "Thiago Lopes"
+    }
+  ],
+  "workout-plan": [
+    {
+      "id": "efdf",
+      "objetivo_treino": "Ganhar massa muscular",
+      "dias_por_semana": 5,
+      "plano_exercicios": [
+        {
+          "dia": 1,
+          "tipo_treino": "Treino de Força",
+          "exercicios": [
+            {
+              "nome": "Agachamento",
+              "series": 4,
+              "repeticoes": 12,
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Supino reto",
+              "series": 4,
+              "repeticoes": 12,
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Puxada na Polia",
+              "series": 4,
+              "repeticoes": 12,
+              "descanso_segundos": 60
+            }
+          ],
+          "aquecimento": "10 minutos de esteira",
+          "alongamento": "5 minutos de alongamento geral"
+        },
+        {
+          "dia": 2,
+          "tipo_treino": "Treino de Hipertrofia",
+          "exercicios": [
+            {
+              "nome": "Deadlift",
+              "series": 4,
+              "repeticoes": 10,
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Desenvolvimento com halteres",
+              "series": 4,
+              "repeticoes": 12,
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Elevação lateral",
+              "series": 4,
+              "repeticoes": 15,
+              "descanso_segundos": 60
+            }
+          ],
+          "aquecimento": "15 minutos de bicicleta estacionária",
+          "alongamento": "5 minutos de alongamento específico para membros superiores e inferiores"
+        },
+        {
+          "dia": 3,
+          "tipo_treino": "Treino de Pernas",
+          "exercicios": [
+            {
+              "nome": "Leg Press",
+              "series": 4,
+              "repeticoes": 12,
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Cadeira extensora",
+              "series": 4,
+              "repeticoes": 15,
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Flexão plantar com halteres",
+              "series": 4,
+              "repeticoes": 15,
+              "descanso_segundos": 60
+            }
+          ],
+          "aquecimento": "10 minutos de esteira",
+          "alongamento": "5 minutos de alongamento para membros inferiores"
+        },
+        {
+          "dia": 4,
+          "tipo_treino": "Treino de Costas e Bíceps",
+          "exercicios": [
+            {
+              "nome": "Barra fixa",
+              "series": 4,
+              "repeticoes": 10,
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Rosca direta",
+              "series": 4,
+              "repeticoes": 12,
+              "descanso_segundos": 60
+            }
+          ],
+          "aquecimento": "10 minutos de remo na máquina",
+          "alongamento": "5 minutos de alongamento para costas e bíceps"
+        },
+        {
+          "dia": 5,
+          "tipo_treino": "Treino de Ombros e Tríceps",
+          "exercicios": [
+            {
+              "nome": "Desenvolvimento militar",
+              "series": 4,
+              "repeticoes": 12,
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Tríceps testa",
+              "series": 4,
+              "repeticoes": 15,
+              "descanso_segundos": 60
+            }
+          ],
+          "aquecimento": "15 minutos de elíptico",
+          "alongamento": "5 minutos de alongamento para ombros e tríceps"
+        }
+      ],
       "email": "thiagoviniciusc33@gmail.com",
       "nome": "Thiago Lopes"
     }

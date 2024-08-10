@@ -4,12 +4,23 @@ import axios from 'axios';
 import { Carousel, CarouselContent, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { QuestionCarouselItem } from './QuestionCarouselItem';
 import { useNavigate } from 'react-router-dom';
+import { toast, Toaster } from 'sonner';
+import { createWorkoutPlan, ExerciseDataProps } from './CreatingWorkoutPlan';
 
 
 
 const saveDietData = async (diet: DietDataProps) => {
   try {
     const response = await axios.post('http://localhost:3000/diets', diet);
+    console.log('Dados salvos com sucesso:', response.data);
+  } catch (error) {
+    console.error('Erro ao salvar os dados:', error);
+  }
+};
+
+const saveWorkoutPlanData = async (workoutPlan: ExerciseDataProps) => {
+  try {
+    const response = await axios.post('http://localhost:3000/workout-plan', workoutPlan);
     console.log('Dados salvos com sucesso:', response.data);
   } catch (error) {
     console.error('Erro ao salvar os dados:', error);
@@ -55,17 +66,18 @@ export function Questionnaire() {
 
   async function handleSubmitDiet() {
     try{
+      const workoutPlan = await createWorkoutPlan(dietData)
       const diet = await createDiet(dietData)
       console.log(diet)
-      if (diet) {
-        saveDietData(diet);
+      if (diet && workoutPlan) {
+        saveWorkoutPlanData(workoutPlan)
+        saveDietData(diet)
         handleNavigate(email);
       }
     } catch (error) {
       console.error('Erro ao enviar a dieta:', error);
     }
   }
-
   return (
     <div className='flex flex-col'>
       <Carousel className="w-full max-w-xs">
