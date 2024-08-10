@@ -74,28 +74,31 @@ export function MealPlan() {
   
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="h-[calc(100vh-5rem)] flex flex-col justify-between">
+      <div className="flex flex-col justify-between">
         <div className="p-4">
           <h2 className="text-2xl font-bold text-center">
             Olá, { nome}! Este é o seu Plano de Alimentação.
           </h2>
-          <h2>Objetivo Calórico</h2>
-          <p>{diet.objetivo_calorico}</p>
-
-          <h2>Necessidades Calóricas Diárias para Objetivo</h2>
-          <p>{diet.necessidades_caloricas_diarias_para_objetivo} calorias</p>
-
-          <h2>Plano de Refeições Diárias</h2>
-          <p>Total de Refeições: {diet.plano_de_refeicoes_diarias.total_de_refeicoes}</p>
-          <p>Calorias por Refeição: {diet.plano_de_refeicoes_diarias.calorias_por_refeicao}</p>
-
-          <h2>Necessidades Diárias de Macronutrientes</h2>
-          <p>Proteínas: {diet.necessidades_diarias_de_macronutrientes.proteinas}</p>
-          <p>Carboidratos: {diet.necessidades_diarias_de_macronutrientes.carboidratos}</p>
-          <p>Gorduras: {diet.necessidades_diarias_de_macronutrientes.gorduras}</p>
+          <div className="pt-4 pl-24">
+            <br />
+            <h2 className="text-[1.25em]"><strong>Objetivo Calórico:</strong></h2>
+            <p>{diet.objetivo_calorico}</p>
+            <br />
+            <h2 className="text-[1.25em]"><strong>Necessidades Calóricas Diárias para Objetivo</strong></h2>
+            <p>{diet.necessidades_caloricas_diarias_para_objetivo} calorias</p>
+            <br />
+            <h2 className="text-[1.25em]"><strong>Plano de Refeições Diárias</strong></h2>
+            <p>Total de Refeições: {diet.plano_de_refeicoes_diarias.total_de_refeicoes}</p>
+            <p>Calorias por Refeição: {diet.plano_de_refeicoes_diarias.calorias_por_refeicao}</p>
+            <br />
+            <h2 className="text-[1.25em]"><strong>Necessidades Diárias de Macronutrientes</strong></h2>
+            <p>Proteínas: {diet.necessidades_diarias_de_macronutrientes.proteinas}</p>
+            <p>Carboidratos: {diet.necessidades_diarias_de_macronutrientes.carboidratos}</p>
+            <p>Gorduras: {diet.necessidades_diarias_de_macronutrientes.gorduras}</p>
+          </div>
         </div>
 
-        <Button className="mt-4 mb-8" onClick={() => {
+        <Button className="mt-4 mb-8 w-[84%] mx-auto" onClick={() => {
           const element = document.getElementById('mealplan');
           if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
@@ -105,14 +108,15 @@ export function MealPlan() {
         </Button>
       </div>
 
-      <div id='mealplan' className="flex flex-row gap-5  items-center justify-center mb-5">
+      <div id='mealplan' className="flex flex-row gap-5 items-center justify-center mb-5">
         <MealCard url="https://blog.samisaude.com.br/wp-content/uploads/2023/01/high-angle-table-full-of-delicious-food-arrangement-1.jpg" foodItems={breakfastItems}/>
         <MealCard url="https://blog.bodytech.com.br/wp-content/uploads/2018/10/alimentos_falsos_saudaveis.jpg" foodItems={morningsnackItems}/>
         <MealCard url="https://imagens-revista.vivadecora.com.br/uploads/2022/03/ideias-de-almoco-de-domingo-simples-e-rapido-de-fazer-Foto-iStock.jpg" foodItems={lunchItems}/>
       </div>
-      <div className="flex flex-row gap-5 items-center justify-center">
+      <div className="flex flex-row gap-5 items-center mb-8 justify-center">
         <MealCard url="https://runfun.com.br/runfun2021/wp-content/uploads/2020/04/lanche-da-tarde.jpg" foodItems={afternoonsnackItems}/>
         <MealCard url="https://areademulher.r7.com/wp-content/uploads/2020/10/jantar-rapido-melhores-receitas-para-fazer-em-casa-2-1200x900.jpg" foodItems={dinnerItems}/>
+        <MealCard url="https://img.freepik.com/fotos-gratis/eucaristia-com-calice-de-vinho-e-uvas_23-2149381627.jpg" foodItems={dinnerItems}/>
       </div>
 
     </div>

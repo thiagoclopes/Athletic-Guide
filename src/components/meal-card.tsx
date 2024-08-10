@@ -47,7 +47,7 @@ const textStyle = {
       <Dialog>
         <DialogTrigger asChild>
           <Button asChild>
-            <Card className="relative w-[250px] h-[45vh] transition-transform duration-300 hover:scale-105">
+            <Card className="relative w-[27%] h-[45vh] transition-transform duration-300 hover:scale-105">
               <div className="absolute inset-0">
                 <img
                   src={url}

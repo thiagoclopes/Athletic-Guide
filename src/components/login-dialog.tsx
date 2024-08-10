@@ -56,7 +56,7 @@ export function FormDialog() {
           <div>
             <Dialog>
               <DialogTrigger asChild>
-                <Button size="lg" variant="outline" onClick={handleClickOpen}>
+                <Button size="lg" variant="outline" style={{width: 'auto'}} onClick={handleClickOpen}>
                   Fazer login
                 </Button>
               </DialogTrigger>
@@ -71,7 +71,7 @@ export function FormDialog() {
                 
                 <form onSubmit={handleSubmit}>
                   <div className="grid gap-4 py-4">
-                    <div className="grid grid-cols-4 items-center gap-4">
+                    <div className="grid-cols-4 items-center flex w-full justify-between content-between flex-row">
                       <Label htmlFor="email" className="text-right">
                         Email
                       </Label>
