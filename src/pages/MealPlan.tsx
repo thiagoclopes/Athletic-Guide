@@ -2,13 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { DietDataProps } from "./InformationCapture/CreatingDiet";
 import { useLocation } from "react-router-dom";
-import { Card, CardFooter, CardTitle } from "@/components/ui/card";
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { NutrientDistributionChart } from "@/components/nutrient-distribuition-chart";
 import { MealCard } from "@/components/meal-card";
 
 export function MealPlan() {
@@ -31,6 +26,7 @@ export function MealPlan() {
       almoco: { alimentos: [] },
       lanche_da_tarde: { alimentos: [] },
       jantar: { alimentos: [] },
+      ceia: { alimentos: [] },
     },
   });
 
@@ -69,6 +65,7 @@ export function MealPlan() {
   const lunchItems = diet.exemplo_de_plano_de_refeicoes.almoco.alimentos;
   const afternoonsnackItems = diet.exemplo_de_plano_de_refeicoes.lanche_da_tarde.alimentos;
   const dinnerItems = diet.exemplo_de_plano_de_refeicoes.jantar.alimentos;
+  const supperItems = diet.exemplo_de_plano_de_refeicoes.ceia.alimentos;
   const nome = diet.nome;
 
   
@@ -109,14 +106,14 @@ export function MealPlan() {
       </div>
 
       <div id='mealplan' className="flex flex-row gap-5 items-center justify-center mb-5">
-        <MealCard url="https://blog.samisaude.com.br/wp-content/uploads/2023/01/high-angle-table-full-of-delicious-food-arrangement-1.jpg" foodItems={breakfastItems}/>
-        <MealCard url="https://blog.bodytech.com.br/wp-content/uploads/2018/10/alimentos_falsos_saudaveis.jpg" foodItems={morningsnackItems}/>
-        <MealCard url="https://imagens-revista.vivadecora.com.br/uploads/2022/03/ideias-de-almoco-de-domingo-simples-e-rapido-de-fazer-Foto-iStock.jpg" foodItems={lunchItems}/>
+        <MealCard title="Café da manhã" url="https://blog.samisaude.com.br/wp-content/uploads/2023/01/high-angle-table-full-of-delicious-food-arrangement-1.jpg" foodItems={breakfastItems}/>
+        <MealCard title="Lanche da manhã" url="https://blog.bodytech.com.br/wp-content/uploads/2018/10/alimentos_falsos_saudaveis.jpg" foodItems={morningsnackItems}/>
+        <MealCard title="Almoço" url="https://imagens-revista.vivadecora.com.br/uploads/2022/03/ideias-de-almoco-de-domingo-simples-e-rapido-de-fazer-Foto-iStock.jpg" foodItems={lunchItems}/>
       </div>
       <div className="flex flex-row gap-5 items-center mb-8 justify-center">
-        <MealCard url="https://runfun.com.br/runfun2021/wp-content/uploads/2020/04/lanche-da-tarde.jpg" foodItems={afternoonsnackItems}/>
-        <MealCard url="https://areademulher.r7.com/wp-content/uploads/2020/10/jantar-rapido-melhores-receitas-para-fazer-em-casa-2-1200x900.jpg" foodItems={dinnerItems}/>
-        <MealCard url="https://img.freepik.com/fotos-gratis/eucaristia-com-calice-de-vinho-e-uvas_23-2149381627.jpg" foodItems={dinnerItems}/>
+        <MealCard title="Lanche da Tarde" url="https://runfun.com.br/runfun2021/wp-content/uploads/2020/04/lanche-da-tarde.jpg" foodItems={afternoonsnackItems}/>
+        <MealCard title="Janta" url="https://areademulher.r7.com/wp-content/uploads/2020/10/jantar-rapido-melhores-receitas-para-fazer-em-casa-2-1200x900.jpg" foodItems={dinnerItems}/>
+        <MealCard title="Ceia" url="https://img.freepik.com/fotos-gratis/eucaristia-com-calice-de-vinho-e-uvas_23-2149381627.jpg" foodItems={supperItems}/>
       </div>
 
     </div>

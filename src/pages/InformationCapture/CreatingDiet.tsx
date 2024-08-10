@@ -15,7 +15,7 @@ export interface QuestionnaireData {
   trainingFrequency: string;
   }
 
-export type RefeicaoTipo = 'cafe_da_manha' | 'lanche_da_manha' | 'almoco' | 'lanche_da_tarde' | 'jantar';
+export type RefeicaoTipo = 'cafe_da_manha' | 'lanche_da_manha' | 'almoco' | 'lanche_da_tarde' | 'jantar' | 'ceia';
 
 export interface DietDataProps {
   nome?: string;
@@ -107,10 +107,13 @@ export interface DietDataProps {
                         },
                         "jantar": {
                             "alimentos": []
+                        },
+                        "ceia": {
+                            "alimentos": []
                         }
                     }
                   }
-                  Preencha as refeições (cafe_da_manha, lanche_da_manha, almoco, lanche_da_tarde, jantar) com alimentos que atendam às necessidades diárias de proteínas, carboidratos e gorduras.
+                  Preencha as refeições (cafe_da_manha, lanche_da_manha, almoco, lanche_da_tarde, jantar, ceia) com alimentos que atendam às necessidades diárias de proteínas, carboidratos e gorduras.
                   Inclua no JSON para cada alimento: nome, quantidade(em gramas ou unidades, especifique a unidade. Exemplo: 25g, 2 Unidades), proteina, carboidrato, e gordura.
                   As quantidades e a composição dos alimentos devem alinhar-se com os valores recomendados de macronutrientes calculados anteriormente.
                   Especifique quando necessário a preparação do alimento, exemplo: (Ovo cozido, Ovo frito)
@@ -128,7 +131,6 @@ export interface DietDataProps {
           }
         );
         const diet: DietDataProps = JSON.parse(response.data.choices[0].message.content);
-        console.log(diet)
         diet.email = email
         diet.nome = name
         console.log(diet)

@@ -25,6 +25,7 @@ const textStyle = {
   }
 
   interface MealCardProps {
+    title: string;
     url: string;
     foodItems: FoodItemProps[];
   }
@@ -42,7 +43,7 @@ const textStyle = {
   }
 
 
-  export function MealCard({ url, foodItems }: MealCardProps) {
+  export function MealCard({ title, url, foodItems }: MealCardProps) {
     return (
       <Dialog>
         <DialogTrigger asChild>
@@ -56,14 +57,14 @@ const textStyle = {
                 />
               </div>
               <CardFooter className="absolute bottom-0 left-0 w-full flex justify-between z-10">
-                <span className="font-semibold" style={textStyle}>Café da Manhã</span>
+                <span className="font-semibold text-sm" style={textStyle}>{title}</span>
               </CardFooter>
             </Card>
           </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[530px]" aria-describedby={undefined}>
           <DialogHeader>
-            <DialogTitle>Café da manhã</DialogTitle>
+            <DialogTitle>{title}</DialogTitle>
             <Table>
               <TableCaption>
                 <Accordion type="single" collapsible>
