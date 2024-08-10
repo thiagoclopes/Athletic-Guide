@@ -14,10 +14,11 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Label } from './ui/label';
 import { Input } from './ui/input';
+import { toast } from 'sonner'
 
-export function FormDialog() {
+export function LoginDialog() {
   const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
+  const [, setOpen] = useState(false);
   const [email, setEmail] = useState('');
 
   const handleClickOpen = () => {
@@ -41,13 +42,14 @@ export function FormDialog() {
 
             if (diet && diet.email === email) {
                 console.log('Login bem-sucedido:', email);
+                localStorage.setItem('email', email);
                 navigate(`/plano-alimentar?email=${encodeURIComponent(email)}`);
                 handleClose();
             } else {
-                console.error('Nenhuma dieta encontrada para o email fornecido');
+              toast.error('Email não registrado');
             }
             } catch (error) {
-            console.error('Erro ao fazer login:', error);
+              toast.error('Erro ao fazer login');
             }
         };
 

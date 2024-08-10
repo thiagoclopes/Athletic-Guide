@@ -61,7 +61,7 @@ const textStyle = {
             </Card>
           </Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[530px]">
+        <DialogContent className="sm:max-w-[530px]" aria-describedby={undefined}>
           <DialogHeader>
             <DialogTitle>Café da manhã</DialogTitle>
             <Table>

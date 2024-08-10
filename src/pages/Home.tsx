@@ -1,8 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
-import { FormDialog } from '../components/login-dialog';
+import { LoginDialog } from '../components/login-dialog';
 import { Button } from '@/components/ui/button';
-import { Dialog } from '@/components/ui/dialog';
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -24,8 +23,7 @@ export const Home = () => {
         <Button size="lg" variant="customDarkBlue" onClick={handleNavigateToRegistration}>
           Registrar Dados
         </Button>
-        <FormDialog />
-        <Dialog />
+        <LoginDialog />
       </div>
     </div>
   );

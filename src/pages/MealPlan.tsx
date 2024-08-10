@@ -43,7 +43,7 @@ export function MealPlan() {
 
   useEffect(() => {
     const fetchDietData = async () => {
-      const cachedEmail = localStorage.getItem('email') || email;
+      const cachedEmail = email || localStorage.getItem('email') ;
 
       if (!cachedEmail) {
         console.error('Email não fornecido na URL ou no cache');
