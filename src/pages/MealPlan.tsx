@@ -81,17 +81,19 @@ export function MealPlan() {
             <h2 className="text-[1.25em]"><strong>Objetivo Calórico:</strong></h2>
             <p>{diet.objetivo_calorico}</p>
             <br />
-            <h2 className="text-[1.25em]"><strong>Necessidades Calóricas Diárias para Objetivo</strong></h2>
+            <h2 className="text-[1.25em]"><strong>Necessidades Calóricas Diárias para Objetivo:</strong></h2>
             <p>{diet.necessidades_caloricas_diarias_para_objetivo} calorias</p>
             <br />
-            <h2 className="text-[1.25em]"><strong>Plano de Refeições Diárias</strong></h2>
-            <p>Total de Refeições: {diet.plano_de_refeicoes_diarias.total_de_refeicoes}</p>
-            <p>Calorias por Refeição: {diet.plano_de_refeicoes_diarias.calorias_por_refeicao}</p>
+            <h2 className="text-[1.25em]"><strong>Total de Refeições:</strong></h2>
+            <p>{diet.plano_de_refeicoes_diarias.total_de_refeicoes}</p>
             <br />
-            <h2 className="text-[1.25em]"><strong>Necessidades Diárias de Macronutrientes</strong></h2>
-            <p>Proteínas: {diet.necessidades_diarias_de_macronutrientes.proteinas}</p>
-            <p>Carboidratos: {diet.necessidades_diarias_de_macronutrientes.carboidratos}</p>
-            <p>Gorduras: {diet.necessidades_diarias_de_macronutrientes.gorduras}</p>
+            <h2 className="text-[1.25em]"><strong>Calorias por Refeição:</strong></h2>
+            <p> {diet.plano_de_refeicoes_diarias.calorias_por_refeicao}</p>
+            <br />
+            <h2 className="text-[1.25em]"><strong>Necessidades Diárias de Macronutrientes:</strong></h2>
+            <p>- Proteínas: {diet.necessidades_diarias_de_macronutrientes.proteinas}</p>
+            <p>- Carboidratos: {diet.necessidades_diarias_de_macronutrientes.carboidratos}</p>
+            <p>- Gorduras: {diet.necessidades_diarias_de_macronutrientes.gorduras}</p>
           </div>
         </div>
 
