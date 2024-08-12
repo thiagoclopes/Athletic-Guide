@@ -36,8 +36,8 @@ export const Home = () => {
           </p>
         </div>
         <div className="flex gap-2">
-          <Button size="lg" className="border-2 border-white rounded-lg" variant="customDarkBlue" onClick={handleNavigateToRegistration}>
-          <p className="text-white font-bold">ALCANÇAR O TOPO</p>
+          <Button size="lg" className="border-2 border-white rounded-lg group" variant="ghost" onClick={handleNavigateToRegistration}>
+          <p className="text-zinc-300 font-bold group-hover:text-red-600">ALCANÇAR O TOPO</p>
           </Button>
           <LoginDialog />
         </div>
