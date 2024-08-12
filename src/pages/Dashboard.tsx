@@ -1,29 +1,22 @@
-
-import { Calendar } from "@/components/ui/calendar";
+import { CalendarCard } from "@/components/calendar-card";
 import { WeatherCard } from "../components/weather-card";
 import { WeightChart } from "../components/weigth-chart";
 import React from "react";
 
-
 export function Dashboard() {
-  const [date, setDate] = React.useState<Date | undefined>(new Date())
-
   return (
     <>
-      <div className="flex">
-        <div className="w-full md:w-1/4">
+      <div className="flex flex-col md:flex-row">
+        <div className="w-full md:w-[22%]">
           <WeatherCard />
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-[50%]">
           <WeightChart />
         </div>
+        <div className="w-full md:w-[28%]">
+          <CalendarCard />
+        </div>
       </div>
-        <Calendar
-          mode="single"
-          selected={date}
-          onSelect={setDate}
-          className="rounded-md border h-[400px]"
-        />
     </>
   );
 }
