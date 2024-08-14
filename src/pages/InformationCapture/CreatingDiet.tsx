@@ -18,6 +18,7 @@ export interface QuestionnaireData {
 export type RefeicaoTipo = 'cafe_da_manha' | 'lanche_da_manha' | 'almoco' | 'lanche_da_tarde' | 'jantar' | 'ceia';
 
 export interface DietDataProps {
+  id?: string;
   nome?: string;
   email?: string;
   objetivo_calorico: string;
