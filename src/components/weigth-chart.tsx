@@ -21,9 +21,9 @@ export function WeightChart() {
   const maxWeight = Math.max(...data.map(d => d.weight));
 
   return (
-    <div className="py-4 px-2">
-      <Card className="w-full">
-        <CardContent className="h-[50vh] flex flex-col p-4">
+    <div className="py-4 px-2 h-full">
+      <Card className="w-full h-full">
+        <CardContent className="flex flex-col p-4 h-full">
           <h6 className="text-lg font-semibold">Progresso Mensal</h6>
           <div className="flex-grow mx-8">
             <ResponsiveContainer width="100%" height="100%">

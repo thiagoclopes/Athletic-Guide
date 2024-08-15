@@ -13,7 +13,7 @@ export function Dashboard() {
         <div className="w-full md:w-[50%]">
           <WeightChart />
         </div>
-        <div className="w-full md:w-[28%]">
+        <div className="w-full md:w-auto">
           <CalendarCard />
         </div>
       </div>

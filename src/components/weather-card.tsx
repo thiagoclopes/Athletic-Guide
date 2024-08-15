@@ -37,9 +37,9 @@ export function WeatherCard() {
     }, [city, apiKey]);
   
     return (
-      <div className="py-4 px-2">
+      <div className="py-4 px-2 h-full">
         {weatherData ? (
-          <Card className="w-full h-[50vh] mx-auto flex flex-col justify-between">
+          <Card className="w-full mx-auto flex flex-col justify-between h-full">
             <div className="flex-shrink-0 max-h-[70%] flex items-center justify-center">
               <img
                 src={`http://openweathermap.org/img/wn/${weatherData.icon}@2x.png`}

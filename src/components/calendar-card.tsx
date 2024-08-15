@@ -8,7 +8,7 @@ export function CalendarCard(){
     return (
         <div className="py-4 px-2">
             <Card>
-                <CardContent className="h-[full] max-h-[50vh] mx-auto p-8">
+                <CardContent className="h-[full] mx-auto p-0">
                     <Calendar
                         mode="single"
                         selected={date}
