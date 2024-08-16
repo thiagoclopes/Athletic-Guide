@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Label } from './ui/label';
 import { Input } from './ui/input';
-import { toast } from 'sonner'
+import { Toaster, toast } from 'sonner'
 
 export function LoginDialog() {
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ export function LoginDialog() {
           });
           
             const diet = response.data[0];
-
+            
             if (diet && diet.email === email) {
                 console.log('Login bem-sucedido:', email);
                 localStorage.setItem('email', email);
@@ -63,7 +63,7 @@ export function LoginDialog() {
                 </Button>
               </DialogTrigger>
       
-              <DialogContent className="sm:max-w-[425px]">
+              <DialogContent className="sm:max-w-[425px]" >
                 <DialogHeader>
                   <DialogTitle>Acesso ao plano</DialogTitle>
                   <DialogDescription>
@@ -90,12 +90,12 @@ export function LoginDialog() {
                   </div>
       
                   <DialogFooter>
-                    <Button type="button" onClick={handleClose}>
-                      Fechar
-                    </Button>
-                    <Button type="submit">
-                      Entrar
-                    </Button>
+                      <Button type="button" onClick={handleClose}>
+                        Fechar
+                      </Button>
+                      <Button type="submit" >
+                        Entrar
+                      </Button>
                   </DialogFooter>
                 </form>
               </DialogContent>

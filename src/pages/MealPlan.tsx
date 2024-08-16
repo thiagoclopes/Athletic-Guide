@@ -34,6 +34,8 @@ export function MealPlan() {
     },
   });
 
+  const [shouldFetchDiet, setShouldFetchDiet] = useState(true);
+
   const useQuery = () => {
     return new URLSearchParams(useLocation().search);
   };
@@ -54,15 +56,18 @@ export function MealPlan() {
         const response = await axios.get(`http://localhost:3000/diets`, {
           params: { email: cachedEmail }
         });
-        console.log('Dados recebidos da API:', response.data);
+        console.log('mealplan recebido da API:', response.data);
         setDiet(response.data[0]);
+        setShouldFetchDiet(false);
       } catch (err) {
         console.error('Erro ao buscar dieta:', err);
       }
     };
 
-    fetchDietData();
-  }, [email, diet]);
+    if (shouldFetchDiet) {
+      fetchDietData();
+    }
+  }, [email, shouldFetchDiet]);
 
   interface FoodItemProps {
     nome: string;
@@ -132,6 +137,7 @@ export function MealPlan() {
         nome: diet.nome
       });
       console.log('Dados atualizados com sucesso:', response.data);
+      setShouldFetchDiet(true);
     } catch (error) {
       console.error('Erro ao atualizar os dados:', error);
     }

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { ActivityCard } from "@/components/activity-card";
 
 export function MyActivity() {
   interface Exercise {
@@ -58,7 +59,7 @@ export function MyActivity() {
         const response = await axios.get(`http://localhost:3000/workout-plan`, {
           params: { email: cachedEmail }
         });
-        console.log('Dados recebidos da API:', response.data);
+        console.log('activityplan recebido da API:', response.data);
         setWorkoutPlan(response.data[0]);
       } catch (err) {
         console.error('Erro ao buscar dieta:', err);
@@ -85,40 +86,8 @@ export function MyActivity() {
           <br />
           <h2 className="text-[1.25em]"><strong>Treinos por semana: </strong></h2>
           <p>{workoutPlan.dias_por_semana} </p>
-          
-          {workoutPlan && (
-            <Accordion type="single" collapsible>
-              {workoutPlan.plano_exercicios.map((dia) => (
-                <AccordionItem key={dia.dia} value={`dia-${dia.dia}`}>
-                  <AccordionTrigger>Dia {dia.dia}: {dia.tipo_treino}</AccordionTrigger>
-                  <AccordionContent>
-                    <Table>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead>Nome do Exercício</TableHead>
-                          <TableHead>Séries</TableHead>
-                          <TableHead>Repetições</TableHead>
-                          <TableHead>Descanso (s)</TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        {dia.exercicios.map((exercicio, index) => (
-                          <TableRow key={index}>
-                            <TableCell>{exercicio.nome}</TableCell>
-                            <TableCell>{exercicio.series}</TableCell>
-                            <TableCell>{exercicio.repeticoes}</TableCell>
-                            <TableCell>{exercicio.descanso_segundos}</TableCell>
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
-                    <p><strong>Aquecimento:</strong> {dia.aquecimento}</p>
-                    <p><strong>Alongamento:</strong> {dia.alongamento}</p>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          )}
+
+          <ActivityCard workoutPlan={workoutPlan}/>
         </div>
          )}
       </div>

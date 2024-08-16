@@ -98,7 +98,7 @@ const textStyle = {
                   <div className="flex flex-row-reverse">
                     <AlertDialog>
                       <AlertDialogTrigger asChild>
-                        <Button variant="outline" className="w-40"><span className="pb-1 font-bold">Mudar refeição</span><CachedIcon className="ml-2" /></Button>
+                        <Button variant="outline" className="w-40"><span className="pb-1 font-bold">Alterar refeição</span><CachedIcon className="ml-2" /></Button>
                       </AlertDialogTrigger>
                       <AlertDialogContent>
                         <AlertDialogHeader>

@@ -4,8 +4,14 @@ import { LoginDialog } from '../components/login-dialog';
 import { Button } from '@/components/ui/button';
 import Bwlogo from "../assets/bw-logo.png"
 import teste from "../assets/imagem-espelhada-horizontal.png"
+import { useEffect } from 'react';
 
 export const Home = () => {
+
+  useEffect(() => {
+    localStorage.removeItem('email');
+  }, []);
+  
   const navigate = useNavigate();
 
   function handleNavigateToRegistration() {
