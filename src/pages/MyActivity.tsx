@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { ActivityCard } from "@/components/activity-card";
 
 export function MyActivity() {
@@ -80,13 +78,14 @@ export function MyActivity() {
         </div>
 
         {workoutPlan && (
-        <div className="pt-4 px-24">
+        <div className="pt-4 px-24 flex flex-row">
+          <div className="absolute">
           <h2 className="text-[1.25em]"><strong>Objetivo: </strong></h2>
           <p>{workoutPlan.objetivo_treino} </p>
           <br />
           <h2 className="text-[1.25em]"><strong>Treinos por semana: </strong></h2>
           <p>{workoutPlan.dias_por_semana} </p>
-
+          </div>
           <ActivityCard workoutPlan={workoutPlan}/>
         </div>
          )}
