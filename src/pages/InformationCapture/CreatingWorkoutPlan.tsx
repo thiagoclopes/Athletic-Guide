@@ -68,12 +68,13 @@ export async function createWorkoutPlan(data: QuestionnaireData) {
                 "plano_exercicios": [
                   {
                     "dia": 1,
+                    "checked": false, // sempre false
                     "tipo_treino": "",
                     "exercicios": [
                       {
                         "nome": "",
                         "series": 0,
-                        "repeticoes": 0,
+                        "repeticoes": "0",
                         "descanso_segundos": 0
                       }
                     ],
@@ -86,7 +87,7 @@ export async function createWorkoutPlan(data: QuestionnaireData) {
               
               Para cada exercício, inclua: nome, número de séries, número de repetições, e tempo de descanso em segundos. Inclua também aquecimento e alongamento recomendados para cada dia de treino. Alinhe o plano com o objetivo de treinamento e as limitações informadas.
               
-              A resposta deve ser apenas o JSON, sem nenhum texto adicional.
+              A resposta deve ser apenas o JSON, sem nenhum texto adicional, acento grave envolvendo-o ou comentários.
             `
           }
         ],
@@ -98,7 +99,7 @@ export async function createWorkoutPlan(data: QuestionnaireData) {
         },
       }
     );
-
+    console.log(response.data.choices[0].message.content);
     const workoutPlan: ExerciseDataProps = JSON.parse(response.data.choices[0].message.content);
     workoutPlan.email = email;
     workoutPlan.nome = name;

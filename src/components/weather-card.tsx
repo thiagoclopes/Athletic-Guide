@@ -42,7 +42,7 @@ export function WeatherCard() {
           <Card className="w-full mx-auto flex flex-col justify-between h-full">
             <div className="flex-shrink-0 max-h-[70%] flex items-center justify-center">
               <img
-                src={`http://openweathermap.org/img/wn/${weatherData.icon}@2x.png`}
+                src={`http://openweathermap.org/img/wn/${weatherData.icon}@4x.png`}
                 alt="Weather icon"
                 className="object-contain w-full h-full"
               />

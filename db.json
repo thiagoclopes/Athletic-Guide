@@ -1,127 +1,18 @@
 {
   "diets": [
     {
-      "id": "6f60",
-      "objetivo_calorico": "Ganhar massa muscular",
-      "necessidades_caloricas_diarias_para_objetivo": 3053.008,
+      "id": "2845",
+      "objetivo_calorico": "Ganho de massa muscular",
+      "necessidades_caloricas_diarias_para_objetivo": 3046,
       "plano_de_refeicoes_diarias": {
         "total_de_refeicoes": 6,
-        "calorias_por_refeicao": 509
+        "calorias_por_refeicao": 507
       },
       "necessidades_diarias_de_macronutrientes": {
-        "proteinas": "213g",
+        "proteinas": "256g",
         "carboidratos": "384g",
-        "gorduras": "57g"
+        "gorduras": "68g"
       },
-      "exemplo_de_plano_de_refeicoes": {
-        "cafe_da_manha": {
-          "alimentos": [
-            {
-              "nome": "Aveia",
-              "quantidade": "50g",
-              "proteina": 7,
-              "carboidrato": 35,
-              "gordura": 2
-            },
-            {
-              "nome": "Leite Integral",
-              "quantidade": "200ml",
-              "proteina": 7,
-              "carboidrato": 10,
-              "gordura": 8
-            }
-          ]
-        },
-        "lanche_da_manha": {
-          "alimentos": [
-            {
-              "nome": "Iogurte Grego",
-              "quantidade": "150g",
-              "proteina": 10,
-              "carboidrato": 8,
-              "gordura": 5
-            }
-          ]
-        },
-        "almoco": {
-          "alimentos": [
-            {
-              "nome": "Peito de Frango Grelhado",
-              "quantidade": "150g",
-              "proteina": 30,
-              "carboidrato": 0,
-              "gordura": 3
-            },
-            {
-              "nome": "Arroz Integral",
-              "quantidade": "100g",
-              "proteina": 3,
-              "carboidrato": 30,
-              "gordura": 1
-            },
-            {
-              "nome": "Brócolis Cozidos",
-              "quantidade": "100g",
-              "proteina": 3,
-              "carboidrato": 5,
-              "gordura": 0.4
-            }
-          ]
-        },
-        "lanche_da_tarde": {
-          "alimentos": [
-            {
-              "nome": "Banana",
-              "quantidade": "1 unidade",
-              "proteina": 1,
-              "carboidrato": 30,
-              "gordura": 0
-            }
-          ]
-        },
-        "jantar": {
-          "alimentos": [
-            {
-              "nome": "Salmão Grelhado",
-              "quantidade": "150g",
-              "proteina": 20,
-              "carboidrato": 0,
-              "gordura": 8
-            },
-            {
-              "nome": "Batata Doce Cozida",
-              "quantidade": "150g",
-              "proteina": 2,
-              "carboidrato": 35,
-              "gordura": 0.2
-            },
-            {
-              "nome": "Aspargos Grelhados",
-              "quantidade": "100g",
-              "proteina": 2,
-              "carboidrato": 4,
-              "gordura": 0
-            }
-          ]
-        },
-        "ceia": {
-          "alimentos": [
-            {
-              "nome": "Claras de Ovo",
-              "quantidade": "3 unidades",
-              "proteina": 18,
-              "carboidrato": 1,
-              "gordura": 0
-            }
-          ]
-        }
-      },
-      "email": "thiagoviniciusc33@gmail.com",
-      "nome": "Thiago Lopes"
-    },
-    {
-      "objetivo_calorico": "Hipercalórico",
-      "necessidades_caloricas_diarias_para_objetivo": 4000,
       "exemplo_de_plano_de_refeicoes": {
         "cafe_da_manha": {
           "alimentos": [
@@ -129,12 +20,19 @@
               "nome": "Aveia",
               "quantidade": "50g",
               "proteina": 6,
-              "carboidrato": 26,
+              "carboidrato": 32,
               "gordura": 2
             },
             {
-              "nome": "Ovos Mexidos",
-              "quantidade": "2 Unidades",
+              "nome": "Banana",
+              "quantidade": "1 unidade",
+              "proteina": 1,
+              "carboidrato": 27,
+              "gordura": 0.3
+            },
+            {
+              "nome": "Ovos mexidos",
+              "quantidade": "2 ovos",
               "proteina": 12,
               "carboidrato": 2,
               "gordura": 10
@@ -144,35 +42,35 @@
         "lanche_da_manha": {
           "alimentos": [
             {
-              "nome": "Banana",
-              "quantidade": "1 Unidade",
-              "proteina": 1,
-              "carboidrato": 27,
-              "gordura": 0
+              "nome": "Iogurte grego",
+              "quantidade": "200g",
+              "proteina": 20,
+              "carboidrato": 10,
+              "gordura": 6
             }
           ]
         },
         "almoco": {
           "alimentos": [
             {
-              "nome": "Peito de Frango Grelhado",
+              "nome": "Frango grelhado",
               "quantidade": "150g",
-              "proteina": 40,
+              "proteina": 42,
               "carboidrato": 0,
               "gordura": 3
             },
             {
-              "nome": "Arroz Integral",
+              "nome": "Arroz integral cozido",
               "quantidade": "100g",
-              "proteina": 3,
-              "carboidrato": 77,
+              "proteina": 2,
+              "carboidrato": 23,
               "gordura": 1
             },
             {
-              "nome": "Feijão Preto",
-              "quantidade": "80g",
-              "proteina": 6,
-              "carboidrato": 18,
+              "nome": "Brócolis cozidos",
+              "quantidade": "100g",
+              "proteina": 3,
+              "carboidrato": 6,
               "gordura": 0
             }
           ]
@@ -180,34 +78,41 @@
         "lanche_da_tarde": {
           "alimentos": [
             {
-              "nome": "Iogurte Grego Natural",
-              "quantidade": "200g",
-              "proteina": 18,
-              "carboidrato": 8,
-              "gordura": 10
+              "nome": "Pão integral",
+              "quantidade": "2 fatias",
+              "proteina": 5,
+              "carboidrato": 28,
+              "gordura": 2
+            },
+            {
+              "nome": "Abacate",
+              "quantidade": "50g",
+              "proteina": 1,
+              "carboidrato": 5,
+              "gordura": 9
             }
           ]
         },
         "jantar": {
           "alimentos": [
             {
-              "nome": "Salmão Grelhado",
+              "nome": "Salmão grelhado",
               "quantidade": "150g",
               "proteina": 30,
               "carboidrato": 0,
               "gordura": 10
             },
             {
-              "nome": "Batata Doce Cozida",
-              "quantidade": "200g",
-              "proteina": 4,
-              "carboidrato": 44,
-              "gordura": 0
+              "nome": "Batata doce assada",
+              "quantidade": "150g",
+              "proteina": 2,
+              "carboidrato": 28,
+              "gordura": 0.1
             },
             {
-              "nome": "Brócolis no Vapor",
+              "nome": "Aspargos cozidos",
               "quantidade": "100g",
-              "proteina": 3,
+              "proteina": 2,
               "carboidrato": 3,
               "gordura": 0
             }
@@ -216,114 +121,52 @@
         "ceia": {
           "alimentos": [
             {
-              "nome": "Ovo cozido",
-              "quantidade": "1 unidade",
-              "proteina": 6,
-              "carboidrato": 1,
-              "gordura": 5
+              "nome": "Cottage",
+              "quantidade": "100g",
+              "proteina": 11,
+              "carboidrato": 3,
+              "gordura": 4
             },
             {
-              "nome": "Castanha-do-pará",
-              "quantidade": "15g",
-              "proteina": 1,
-              "carboidrato": 2,
-              "gordura": 9
+              "nome": "Nozes",
+              "quantidade": "30g",
+              "proteina": 5,
+              "carboidrato": 3,
+              "gordura": 20
             }
           ]
         }
       },
-      "plano_de_refeicoes_diarias": {
-        "total_de_refeicoes": 6,
-        "calorias_por_refeicao": 667
-      },
-      "necessidades_diarias_de_macronutrientes": {
-        "proteinas": "230g",
-        "carboidratos": "575g",
-        "gorduras": "89g"
-      },
-      "email": "natanbastos7@gmail.com",
-      "nome": "Natan Bastos de Morais",
-      "id": "d243"
+      "email": "thiagoviniciusc33@gmail.com",
+      "nome": "Thiago"
     }
   ],
   "workout-plan": [
     {
-      "id": "efdf",
       "objetivo_treino": "Ganhar massa muscular",
       "dias_por_semana": 5,
       "plano_exercicios": [
         {
           "dia": 1,
-          "tipo_treino": "Treino de Força",
+          "checked": true,
+          "tipo_treino": "Membros inferiores",
           "exercicios": [
             {
-              "nome": "Agachamento",
+              "nome": "Agachamento Livre",
               "series": 4,
-              "repeticoes": 12,
+              "repeticoes": "12-15",
               "descanso_segundos": 60
             },
             {
-              "nome": "Supino reto",
+              "nome": "Levantamento Terra",
               "series": 4,
-              "repeticoes": 12,
+              "repeticoes": "10-12",
               "descanso_segundos": 60
             },
             {
-              "nome": "Puxada na Polia",
-              "series": 4,
-              "repeticoes": 12,
-              "descanso_segundos": 60
-            }
-          ],
-          "aquecimento": "10 minutos de esteira",
-          "alongamento": "5 minutos de alongamento geral"
-        },
-        {
-          "dia": 2,
-          "tipo_treino": "Treino de Hipertrofia",
-          "exercicios": [
-            {
-              "nome": "Deadlift",
-              "series": 4,
-              "repeticoes": 10,
-              "descanso_segundos": 60
-            },
-            {
-              "nome": "Desenvolvimento com halteres",
-              "series": 4,
-              "repeticoes": 12,
-              "descanso_segundos": 60
-            },
-            {
-              "nome": "Elevação lateral",
-              "series": 4,
-              "repeticoes": 15,
-              "descanso_segundos": 60
-            }
-          ],
-          "aquecimento": "15 minutos de bicicleta estacionária",
-          "alongamento": "5 minutos de alongamento específico para membros superiores e inferiores"
-        },
-        {
-          "dia": 3,
-          "tipo_treino": "Treino de Pernas",
-          "exercicios": [
-            {
-              "nome": "Leg Press",
-              "series": 4,
-              "repeticoes": 12,
-              "descanso_segundos": 60
-            },
-            {
-              "nome": "Cadeira extensora",
-              "series": 4,
-              "repeticoes": 15,
-              "descanso_segundos": 60
-            },
-            {
-              "nome": "Flexão plantar com halteres",
-              "series": 4,
-              "repeticoes": 15,
+              "nome": "Leg Press 45 graus",
+              "series": 3,
+              "repeticoes": "12-15",
               "descanso_segundos": 60
             }
           ],
@@ -331,170 +174,117 @@
           "alongamento": "5 minutos de alongamento para membros inferiores"
         },
         {
-          "dia": 4,
-          "tipo_treino": "Treino de Costas e Bíceps",
-          "exercicios": [
-            {
-              "nome": "Barra fixa",
-              "series": 4,
-              "repeticoes": 10,
-              "descanso_segundos": 60
-            },
-            {
-              "nome": "Rosca direta",
-              "series": 4,
-              "repeticoes": 12,
-              "descanso_segundos": 60
-            }
-          ],
-          "aquecimento": "10 minutos de remo na máquina",
-          "alongamento": "5 minutos de alongamento para costas e bíceps"
-        },
-        {
-          "dia": 5,
-          "tipo_treino": "Treino de Ombros e Tríceps",
-          "exercicios": [
-            {
-              "nome": "Desenvolvimento militar",
-              "series": 4,
-              "repeticoes": 12,
-              "descanso_segundos": 60
-            },
-            {
-              "nome": "Tríceps testa",
-              "series": 4,
-              "repeticoes": 15,
-              "descanso_segundos": 60
-            }
-          ],
-          "aquecimento": "15 minutos de elíptico",
-          "alongamento": "5 minutos de alongamento para ombros e tríceps"
-        }
-      ],
-      "email": "thiagoviniciusc33@gmail.com",
-      "nome": "Thiago Lopes"
-    },
-    {
-      "id": "6d4e",
-      "objetivo_treino": "Atletismo",
-      "dias_por_semana": 6,
-      "plano_exercicios": [
-        {
-          "dia": 1,
-          "tipo_treino": "Cardio e Resistência",
-          "exercicios": [
-            {
-              "nome": "Corrida",
-              "series": 5,
-              "repeticoes": 1000,
-              "descanso_segundos": 60
-            },
-            {
-              "nome": "Agachamento",
-              "series": 4,
-              "repeticoes": 15,
-              "descanso_segundos": 45
-            },
-            {
-              "nome": "Flexão de Braço",
-              "series": 3,
-              "repeticoes": 20,
-              "descanso_segundos": 30
-            }
-          ],
-          "aquecimento": "15 minutos de corrida leve",
-          "alongamento": "Alongamento de pernas e braços"
-        },
-        {
           "dia": 2,
-          "tipo_treino": "Corrida Intervalada",
+          "checked": false,
+          "tipo_treino": "Peito e Tríceps",
           "exercicios": [
             {
-              "nome": "Corrida Intervalada",
-              "series": 8,
-              "repeticoes": "800m x 4",
+              "nome": "Supino Reto",
+              "series": 4,
+              "repeticoes": "10-12",
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Paralelas",
+              "series": 3,
+              "repeticoes": "12-15",
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Tríceps Pulley",
+              "series": 3,
+              "repeticoes": "12-15",
               "descanso_segundos": 60
             }
           ],
-          "aquecimento": "10 minutos de trote leve e 5 minutos de alongamento dinâmico",
-          "alongamento": "Alongamento dos membros inferiores"
+          "aquecimento": "10 minutos de bicicleta ergométrica",
+          "alongamento": "5 minutos de alongamento para peito e tríceps"
         },
         {
           "dia": 3,
-          "tipo_treino": "Treino de Força",
+          "checked": false,
+          "tipo_treino": "Costas e Bíceps",
           "exercicios": [
             {
-              "nome": "Levantamento Terra",
-              "series": 5,
-              "repeticoes": 10,
+              "nome": "Barra Fixa",
+              "series": 4,
+              "repeticoes": "8-10",
               "descanso_segundos": 60
             },
             {
-              "nome": "Supino",
-              "series": 4,
-              "repeticoes": 12,
-              "descanso_segundos": 45
+              "nome": "Puxada Alta",
+              "series": 3,
+              "repeticoes": "12-15",
+              "descanso_segundos": 60
             },
             {
-              "nome": "Remada",
+              "nome": "Rosca Direta",
               "series": 3,
-              "repeticoes": 15,
-              "descanso_segundos": 30
+              "repeticoes": "12-15",
+              "descanso_segundos": 60
             }
           ],
-          "aquecimento": "Aquecimento geral com exercícios leves e alongamento",
-          "alongamento": "Alongamento de costas e peitoral"
+          "aquecimento": "10 minutos de remo",
+          "alongamento": "5 minutos de alongamento para costas e bíceps"
         },
         {
           "dia": 4,
-          "tipo_treino": "Corrida Longa",
+          "checked": false,
+          "tipo_treino": "Ombros e Abdômen",
           "exercicios": [
             {
-              "nome": "Corrida Contínua",
-              "series": 1,
-              "repeticoes": "10km",
-              "descanso_segundos": 0
-            }
-          ],
-          "aquecimento": "10 minutos de trote leve e alongamento dinâmico",
-          "alongamento": "Alongamento dos membros inferiores"
-        },
-        {
-          "dia": 5,
-          "tipo_treino": "Treino de Potência",
-          "exercicios": [
-            {
-              "nome": "Saltos com Peso Corporal",
+              "nome": "Desenvolvimento com Halteres",
               "series": 4,
-              "repeticoes": 8,
-              "descanso_segundos": 45
+              "repeticoes": "10-12",
+              "descanso_segundos": 60
             },
             {
-              "nome": "Arremesso de Medicine Ball",
+              "nome": "Prancha Abdominal",
               "series": 3,
-              "repeticoes": 10,
-              "descanso_segundos": 30
+              "repeticoes": "30-45 segundos",
+              "descanso_segundos": 60
             },
             {
-              "nome": "Sprints",
-              "series": 6,
-              "repeticoes": "50m",
+              "nome": "Elevação Lateral",
+              "series": 3,
+              "repeticoes": "12-15",
               "descanso_segundos": 60
             }
           ],
-          "aquecimento": "Aquecimento dinâmico com pulos e corridas leves",
-          "alongamento": "Alongamento de membros inferiores e superiores"
+          "aquecimento": "10 minutos de corda",
+          "alongamento": "5 minutos de alongamento para ombros e abdômen"
         },
         {
-          "dia": 6,
-          "tipo_treino": "Recuperação Ativa",
-          "exercicios": [],
-          "aquecimento": "15 minutos de caminhada leve",
-          "alongamento": "Alongamento suave de todo o corpo"
+          "dia": 5,
+          "checked": false,
+          "tipo_treino": "Corpo Completo",
+          "exercicios": [
+            {
+              "nome": "Agachamento Sumô",
+              "series": 4,
+              "repeticoes": "12-15",
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Supino Inclinado",
+              "series": 4,
+              "repeticoes": "10-12",
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Rosca Alternada",
+              "series": 3,
+              "repeticoes": "12-15",
+              "descanso_segundos": 60
+            }
+          ],
+          "aquecimento": "10 minutos de esteira",
+          "alongamento": "5 minutos de alongamento para corpo completo"
         }
       ],
-      "email": "natanbastos7@gmail.com",
-      "nome": "Natan Bastos de Morais"
+      "email": "thiagoviniciusc33@gmail.com",
+      "nome": "Thiago",
+      "id": "9ce0"
     }
   ]
 }

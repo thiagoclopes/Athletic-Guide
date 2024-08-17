@@ -119,7 +119,7 @@ export interface DietDataProps {
                   As quantidades e a composição dos alimentos devem alinhar-se com os valores recomendados de macronutrientes calculados anteriormente.
                   Especifique quando necessário a preparação do alimento, exemplo: (Ovo cozido, Ovo frito)
   
-                  A resposta deve ser apenas o JSON, sem nenhum texto adicional.
+                  A resposta deve ser apenas o JSON, sem nenhum texto adicional nem acento grave envolvendo-o.
                 `
               }
             ],
@@ -132,6 +132,7 @@ export interface DietDataProps {
           }
         );
         const diet: DietDataProps = JSON.parse(response.data.choices[0].message.content);
+        console.log(diet);
         diet.email = email
         diet.nome = name
         console.log(diet)

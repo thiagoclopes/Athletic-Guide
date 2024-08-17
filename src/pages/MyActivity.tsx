@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { ActivityCard } from "@/components/activity-card";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { A11y, EffectCards, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 export function MyActivity() {
   interface Exercise {
@@ -12,6 +14,7 @@ export function MyActivity() {
   }
   
   interface Dia {
+    checked: boolean;
     dia: number;
     tipo_treino: string;
     exercicios: Exercise[];
@@ -37,6 +40,8 @@ export function MyActivity() {
     nome: ''
   });
 
+  const [shouldFetchWorkoutPlan, setShouldFetchWorkoutPlan] = useState<boolean>(true);
+
   const useQuery = () => {
     return new URLSearchParams(useLocation().search);
   };
@@ -59,13 +64,17 @@ export function MyActivity() {
         });
         console.log('activityplan recebido da API:', response.data);
         setWorkoutPlan(response.data[0]);
+        setShouldFetchWorkoutPlan(false);
       } catch (err) {
         console.error('Erro ao buscar dieta:', err);
       }
     };
 
-    fetchWorkoutPlanData();
-  }, [email]);
+    if (shouldFetchWorkoutPlan) {
+      fetchWorkoutPlanData();
+    }
+    
+  }, [email, shouldFetchWorkoutPlan]);
 
   
   return (
@@ -86,7 +95,26 @@ export function MyActivity() {
           <h2 className="text-[1.25em]"><strong>Treinos por semana: </strong></h2>
           <p>{workoutPlan.dias_por_semana} </p>
           </div>
-          <ActivityCard workoutPlan={workoutPlan}/>
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y, EffectCards]}
+            effect="cards"
+            cardsEffect={{
+                slideShadows: false,
+              }}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}
+            className="w-[100vh] h-[34rem] mx-auto"
+          >
+            {workoutPlan && workoutPlan.plano_exercicios.map((dia) => (
+                <SwiperSlide key={workoutPlan.id}>
+                  <ActivityCard workoutPlan={workoutPlan} dia={dia} setShouldFetchWorkoutPlan={setShouldFetchWorkoutPlan}/>
+                </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
          )}
       </div>
