@@ -3,7 +3,6 @@ import { WeatherCard } from "../components/weather-card";
 import { WeightChart } from "../components/weigth-chart";
 import React from "react";
 import { WeightInputCard } from "@/components/weight-input-card";
-import { Card } from "@/components/ui/card";
 
 export function Dashboard() {
   return (
