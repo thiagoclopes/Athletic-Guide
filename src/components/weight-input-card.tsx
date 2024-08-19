@@ -13,7 +13,7 @@ export function WeightInputCard(){
                 </div>
                 <Input type="number" placeholder="Digite seu peso (kg)" className="mx-auto mb-10"/>
                 <div className="flex justify-center pb-4">
-                    <Button>oi</Button>
+                    <Button>OK</Button>
                 </div>
             </Card>
         </div>
