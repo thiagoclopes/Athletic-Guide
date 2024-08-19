@@ -37,7 +37,7 @@ export function WeatherCard() {
     }, [city, apiKey]);
   
     return (
-      <div className="py-4 px-2 h-full">
+      <div className="px-2 h-full">
         {weatherData ? (
           <Card className="w-full mx-auto flex flex-col justify-between h-full">
             <div className="flex-shrink-0 max-h-[70%] flex items-center justify-center">

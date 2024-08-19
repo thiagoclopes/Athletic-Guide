@@ -5,9 +5,9 @@ export interface QuestionnaireData {
   email: string;
   phone: string;
   gender: string;
-  ageValue: number[];
+  ageValue: string;
   weight: string;
-  height: number[];
+  height: string;
   trainingGoal: string;
   activityLevel: string;
   medicalCondition: string;

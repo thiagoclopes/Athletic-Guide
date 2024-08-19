@@ -3,6 +3,7 @@ import { WeatherCard } from "../components/weather-card";
 import { WeightChart } from "../components/weigth-chart";
 import React from "react";
 import { WeightInputCard } from "@/components/weight-input-card";
+import { Card } from "@/components/ui/card";
 
 export function Dashboard() {
   return (
@@ -17,11 +18,14 @@ export function Dashboard() {
         <div className="w-full md:w-auto">
           <CalendarCard />
         </div>
-        
       </div>
-      <div className="w-full md:w-[22%]">
+      <div className="flex flex-col md:flex-row">
+        <div className="w-full md:w-[22%]">
         <WeightInputCard/>
+        </div>
+
       </div>
+
     </div>
   );
 }

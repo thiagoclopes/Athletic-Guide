@@ -6,9 +6,9 @@ import { Card, CardContent } from "./ui/card";
 export function CalendarCard(){
     const [date, setDate] = useState<Date | undefined>(new Date())
     return (
-        <div className="py-4 px-2">
+        <div className="px-2">
             <Card>
-                <CardContent className="h-[full] mx-auto p-0">
+                <CardContent className="h-[full] mx-auto p-8">
                     <Calendar
                         mode="single"
                         selected={date}

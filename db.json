@@ -139,6 +139,132 @@
       },
       "email": "thiagoviniciusc33@gmail.com",
       "nome": "Thiago"
+    },
+    {
+      "id": "2d90",
+      "objetivo_calorico": "Manutenção",
+      "necessidades_caloricas_diarias_para_objetivo": 2486.3406000000004,
+      "plano_de_refeicoes_diarias": {
+        "total_de_refeicoes": 6,
+        "calorias_por_refeicao": 414.39
+      },
+      "necessidades_diarias_de_macronutrientes": {
+        "proteinas": "93g",
+        "carboidratos": "311g",
+        "gorduras": "55g"
+      },
+      "exemplo_de_plano_de_refeicoes": {
+        "cafe_da_manha": {
+          "alimentos": [
+            {
+              "nome": "Aveia",
+              "quantidade": "40g",
+              "proteina": 5,
+              "carboidrato": 27,
+              "gordura": 2
+            },
+            {
+              "nome": "Leite Desnatado",
+              "quantidade": "200ml",
+              "proteina": 6,
+              "carboidrato": 12,
+              "gordura": 0
+            }
+          ]
+        },
+        "lanche_da_manha": {
+          "alimentos": [
+            {
+              "nome": "Iogurte Grego",
+              "quantidade": "150g",
+              "proteina": 15,
+              "carboidrato": 6,
+              "gordura": 0
+            }
+          ]
+        },
+        "almoco": {
+          "alimentos": [
+            {
+              "nome": "Peito de Frango Grelhado",
+              "quantidade": "100g",
+              "proteina": 25,
+              "carboidrato": 0,
+              "gordura": 1
+            },
+            {
+              "nome": "Arroz Integral",
+              "quantidade": "150g",
+              "proteina": 5,
+              "carboidrato": 40,
+              "gordura": 2
+            },
+            {
+              "nome": "Brócolis Cozidos",
+              "quantidade": "100g",
+              "proteina": 3,
+              "carboidrato": 5,
+              "gordura": 0
+            }
+          ]
+        },
+        "lanche_da_tarde": {
+          "alimentos": [
+            {
+              "nome": "Banana",
+              "quantidade": "1 Unidade",
+              "proteina": 1,
+              "carboidrato": 27,
+              "gordura": 0
+            },
+            {
+              "nome": "Amêndoas",
+              "quantidade": "20g",
+              "proteina": 4,
+              "carboidrato": 2,
+              "gordura": 7
+            }
+          ]
+        },
+        "jantar": {
+          "alimentos": [
+            {
+              "nome": "Salmão Grelhado",
+              "quantidade": "100g",
+              "proteina": 20,
+              "carboidrato": 0,
+              "gordura": 10
+            },
+            {
+              "nome": "Batata Doce Assada",
+              "quantidade": "150g",
+              "proteina": 2,
+              "carboidrato": 40,
+              "gordura": 0
+            },
+            {
+              "nome": "Aspargos Cozidos",
+              "quantidade": "100g",
+              "proteina": 2,
+              "carboidrato": 3,
+              "gordura": 0
+            }
+          ]
+        },
+        "ceia": {
+          "alimentos": [
+            {
+              "nome": "Ovo Cozido",
+              "quantidade": "2 Unidades",
+              "proteina": 12,
+              "carboidrato": 2,
+              "gordura": 10
+            }
+          ]
+        }
+      },
+      "email": "natanbastos7@gmail.com",
+      "nome": "Natan"
     }
   ],
   "workout-plan": [
@@ -148,7 +274,7 @@
       "plano_exercicios": [
         {
           "dia": 1,
-          "checked": true,
+          "checked": false,
           "tipo_treino": "Membros inferiores",
           "exercicios": [
             {
@@ -285,6 +411,128 @@
       "email": "thiagoviniciusc33@gmail.com",
       "nome": "Thiago",
       "id": "9ce0"
+    },
+    {
+      "id": "84e9",
+      "objetivo_treino": "Atletismo",
+      "dias_por_semana": 6,
+      "plano_exercicios": [
+        {
+          "dia": 1,
+          "checked": false,
+          "tipo_treino": "Corrida de Velocidade",
+          "exercicios": [
+            {
+              "nome": "Tiros de 50 metros",
+              "series": 8,
+              "repeticoes": "6",
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Saltos em distância",
+              "series": 5,
+              "repeticoes": "3",
+              "descanso_segundos": 90
+            }
+          ],
+          "aquecimento": "Corrida leve por 10 minutos + alongamento dinâmico",
+          "alongamento": "Alongamento estático completo"
+        },
+        {
+          "dia": 2,
+          "checked": false,
+          "tipo_treino": "Treino de Força",
+          "exercicios": [
+            {
+              "nome": "Agachamento",
+              "series": 4,
+              "repeticoes": "8",
+              "descanso_segundos": 60
+            },
+            {
+              "nome": "Supino",
+              "series": 4,
+              "repeticoes": "8",
+              "descanso_segundos": 60
+            }
+          ],
+          "aquecimento": "Cardio leve por 10 minutos + aquecimento específico para os grupos musculares",
+          "alongamento": "Alongamento para os grupos musculares trabalhados"
+        },
+        {
+          "dia": 3,
+          "checked": false,
+          "tipo_treino": "Treino de Resistência",
+          "exercicios": [
+            {
+              "nome": "Corrida Contínua",
+              "series": 1,
+              "repeticoes": "30 minutos",
+              "descanso_segundos": 0
+            },
+            {
+              "nome": "Flexões",
+              "series": 3,
+              "repeticoes": "12",
+              "descanso_segundos": 60
+            }
+          ],
+          "aquecimento": "Trote leve por 10 minutos + aquecimento articular",
+          "alongamento": "Alongamento global"
+        },
+        {
+          "dia": 4,
+          "checked": false,
+          "tipo_treino": "Treino de Velocidade",
+          "exercicios": [
+            {
+              "nome": "Corrida Intervalada",
+              "series": 6,
+              "repeticoes": "400 metros",
+              "descanso_segundos": 90
+            },
+            {
+              "nome": "Pliometria (saltos)",
+              "series": 5,
+              "repeticoes": "5",
+              "descanso_segundos": 60
+            }
+          ],
+          "aquecimento": "Corrida em ritmo moderado por 10 minutos + atividades específicas de aquecimento",
+          "alongamento": "Alongamento dinâmico"
+        },
+        {
+          "dia": 5,
+          "checked": false,
+          "tipo_treino": "Treino Funcional",
+          "exercicios": [
+            {
+              "nome": "Burpees",
+              "series": 3,
+              "repeticoes": "10",
+              "descanso_segundos": 45
+            },
+            {
+              "nome": "Prancha",
+              "series": 3,
+              "repeticoes": "30 segundos",
+              "descanso_segundos": 30
+            }
+          ],
+          "aquecimento": "Cardio leve por 10 minutos + exercícios funcionais específicos",
+          "alongamento": "Alongamento para todo o corpo"
+        },
+        {
+          "dia": 6,
+          "checked": false,
+          "tipo_treino": "Descanso Ativo",
+          "exercicios": [],
+          "aquecimento": "Caminhada leve por 20 minutos",
+          "alongamento": "Alongamento suave"
+        }
+      ],
+      "email": "natanbastos7@gmail.com",
+      "nome": "Natan"
     }
   ]
 }

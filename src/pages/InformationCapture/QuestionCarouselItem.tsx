@@ -1,7 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CarouselItem } from "@/components/ui/carousel";
 import { Input } from "@/components/ui/input";
-import { Slider } from "@/components/ui/slider";
 import { useEffect, useState } from "react";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -16,9 +14,9 @@ interface QuestionCarouselItemProps {
     email: string;
     phone: string;
     gender: string;
-    ageValue: number[];
+    ageValue: string;
     weight: string;
-    height: number[];
+    height: string;
     trainingGoal: string;
     activityLevel: string;
     medicalCondition: string;
@@ -28,9 +26,9 @@ interface QuestionCarouselItemProps {
     setEmail: (value: string) => void;
     setPhone: (value: string) => void;
     setGender: (value: string) => void;
-    setAgeValue: (value: number[]) => void;
+    setAgeValue: (value: string) => void;
     setWeight: (value: string) => void;
-    setHeight: (value: number[]) => void;
+    setHeight: (value: string) => void;
     setTrainingGoal: (value: string) => void;
     setActivityLevel: (value: string) => void;
     setMedicalCondition: (value: string) => void;
@@ -61,16 +59,15 @@ export function QuestionCarouselItem({id, name, email, phone, gender, ageValue, 
     
 
 return (
-    <CarouselItem key={id}>
       <div className="p-1">
         {id === 1 && (
             <Card className="aspect-square">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-center">
+                  <CardTitle className="text-xl font-semibold text-center pt-4">
                     Digite seus dados
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="flex flex-col items-center justify-center gap-5">
+                <CardContent className="flex flex-col items-center justify-center gap-5 pt-14">
                   <Input
                     type="text"
                     placeholder="Nome"
@@ -105,66 +102,66 @@ return (
             </Card>
         )}
         {id === 2 && (
-          <Card className="aspect-square">
-            <CardHeader>
+        <Card className="aspect-square">
+          <CardContent className="flex flex-col items-center justify-center gap-10 my-40">
+            <div className="flex flex-row items-center justify-center gap-2">
               <CardTitle className="text-xl font-semibold text-center">
                 Qual a sua idade?
               </CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-col items-center justify-center gap-5">
-              <Slider className="pt-16"
-              value={ageValue}
-              onValueChange={(setAgeValue)}
-              defaultValue={[33]} 
-              max={100} 
-              step={1} />
-              <h2 className="text-xl font-semibold text-center">{ageValue[0]} anos </h2>
-            </CardContent>
-          </Card>
-        )}
-        {id === 3 && (
-        <Card className="aspect-square">
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-center">
-              Qual a sua altura?
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col items-center justify-center gap-10">
-            <div className="flex flex-row items-center justify-center gap-2">
-                <InputOTP 
-                    maxLength={3}
-                    value={weight}
-                    onChange={(weight) => setWeight(weight)}
-                >
-                    <InputOTPGroup>
-                    <InputOTPSlot index={0} />
-                    <InputOTPSlot index={1} />
-                    <InputOTPSlot index={2} />
-                    </InputOTPGroup>
-                </InputOTP>
-                <span className="font-bold">cm</span>
+              <InputOTP 
+                  maxLength={3}
+                  value={ageValue}
+                  onChange={(ageValue) => setAgeValue(ageValue)}
+              >
+                  <InputOTPGroup>
+                  <InputOTPSlot index={0} />
+                  <InputOTPSlot index={1} />
+                  </InputOTPGroup>
+              </InputOTP>
+              <span className="font-bold">anos</span>
             </div>
-            <div className="flex flex-col w-full gap-3">
-                <h2 className="font-semibold">E o peso?</h2>
-                <Slider
-                value={height}
-                onValueChange={(setHeight)}
-                defaultValue={[50]} 
-                max={100} 
-                step={1} />
-                <h2 className="text-xl font-semibold text-center">{height[0]}kg </h2>
+            <div className="flex flex-row items-center justify-center gap-2">
+              <CardTitle className="text-xl font-semibold text-center">
+                Qual a sua altura?
+              </CardTitle>
+              <InputOTP 
+                  maxLength={3}
+                  value={height}
+                  onChange={(height) => setHeight(height)}
+              >
+                  <InputOTPGroup>
+                  <InputOTPSlot index={0} />
+                  <InputOTPSlot index={1} />
+                  <InputOTPSlot index={2} />
+                  </InputOTPGroup>
+              </InputOTP>
+              <span className="font-bold">cm</span>
+            </div>
+            <div className="flex flex-row items-center justify-center gap-2">
+              <CardTitle className="text-xl font-semibold text-center">E o peso?</CardTitle>
+              <InputOTP 
+                  maxLength={3}
+                  value={weight}
+                  onChange={(weight) => setWeight(weight)}
+              >
+                  <InputOTPGroup>
+                  <InputOTPSlot index={0} />
+                  <InputOTPSlot index={1} />
+                  </InputOTPGroup>
+              </InputOTP>
+              <span className="font-bold">kg</span>
             </div>
           </CardContent>
         </Card>
       )}
-      {id === 4 && (
+      {id === 3 && (
           <Card className="aspect-square">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold text-center mb-10">
+              <CardTitle className="text-xl font-semibold text-center mb-10 mt-28">
                 Qual o seu objetivo?
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex flex-col items-center justify-center gap-5">
+            <CardContent className="flex flex-col items-center justify-center gap-5 w-[80%] m-auto">
                 <Textarea
                     placeholder="Exemplo: Ganhar massa muscular" 
                     value={trainingGoal}
@@ -173,10 +170,10 @@ return (
             </CardContent>
           </Card>
         )}
-        {id === 5 && (
+        {id === 4 && (
           <Card className="aspect-square">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold text-center  mb-10">
+              <CardTitle className="text-xl font-semibold text-center mb-10 mt-36">
                 Qual o seu nível de atividade fisica?
               </CardTitle>
             </CardHeader>
@@ -197,10 +194,10 @@ return (
             </CardContent>
           </Card>
         )}
-        {id === 6 && (
+        {id === 5 && (
           <Card className="aspect-square">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold text-center  mb-3">
+              <CardTitle className="text-xl font-semibold text-center  mb-3 mt-48">
               Tem alguma condição médica relevante?
               </CardTitle>
             </CardHeader>
@@ -228,10 +225,10 @@ return (
             </CardContent>
           </Card>
         )}
-        {id === 7 && (
+        {id === 6 && (
           <Card className="aspect-square">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold text-center  mb-3">
+              <CardTitle className="text-xl font-semibold text-center mb-3 mt-48">
                 Você tem alguma alergia alimentar ou intolerância?
               </CardTitle>
             </CardHeader>
@@ -259,10 +256,10 @@ return (
             </CardContent>
           </Card>
         )}
-        {id === 8 && (
+        {id === 7 && (
           <Card className="aspect-square">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold text-center  mb-3">
+              <CardTitle className="text-xl font-semibold text-center mb-3 mt-48">
                 Com que frequência você treina?
               </CardTitle>
             </CardHeader>
@@ -286,10 +283,10 @@ return (
             </CardContent>
           </Card>
         )}
-        {id === 9 && (
+        {id === 8 && (
           <Card className="aspect-square">
             <CardHeader>
-                <CardTitle className="text-xl font-semibold text-center mb-14">
+                <CardTitle className="text-xl font-semibold text-center mb-14 mt-36">
                     Finalizar cadastro
                 </CardTitle>
             </CardHeader>
@@ -299,6 +296,5 @@ return (
           </Card>
         )}
       </div>
-    </CarouselItem>
   );
 }

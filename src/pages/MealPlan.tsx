@@ -173,7 +173,7 @@ export function MealPlan() {
             <p>{diet.objetivo_calorico}</p>
             <br />
             <h2 className="text-[1.25em]"><strong>Necessidades Calóricas Diárias para Objetivo:</strong></h2>
-            <p>{diet.necessidades_caloricas_diarias_para_objetivo} calorias</p>
+            <p>{Math.floor(diet.necessidades_caloricas_diarias_para_objetivo)} calorias</p>
             <br />
             <h2 className="text-[1.25em]"><strong>Total de Refeições:</strong></h2>
             <p>{diet.plano_de_refeicoes_diarias.total_de_refeicoes}</p>

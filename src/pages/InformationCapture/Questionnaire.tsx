@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { createDiet, DietDataProps } from './CreatingDiet';
 import axios from 'axios';
-import { Carousel, CarouselContent, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { QuestionCarouselItem } from './QuestionCarouselItem';
 import { useNavigate } from 'react-router-dom';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { toast, Toaster } from 'sonner';
 import { createWorkoutPlan, ExerciseDataProps } from './CreatingWorkoutPlan';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { A11y, EffectFade, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
 
 
@@ -34,9 +36,9 @@ export function Questionnaire() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [gender, setGender] = useState('');
-  const [ageValue, setAgeValue] = useState([33]);
+  const [ageValue, setAgeValue] = useState('');
   const [weight, setWeight] = useState('');
-  const [height, setHeight] = useState([50]);
+  const [height, setHeight] = useState('');
   const [trainingGoal, setTrainingGoal] = useState('');
   const [activityLevel, setActivityLevel] = useState('');
   const [medicalCondition, setMedicalCondition] = useState('Não');
@@ -80,42 +82,51 @@ export function Questionnaire() {
   }
   return (
     <div className='flex flex-col'>
-      <Carousel className="w-full max-w-xs">
-        <CarouselContent>
-          {Array.from({ length: 9 }).map((_, index) => (
-            <QuestionCarouselItem
-              id={index+1}
-              name={name}
-              email={email}
-              phone={phone}
-              gender={gender}
-              ageValue={ageValue}
-              weight={weight}
-              height={height}
-              trainingGoal={trainingGoal}
-              activityLevel={activityLevel}
-              medicalCondition={medicalCondition}
-              foodAllergy={foodAllergy}
-              trainingFrequency={trainingFrequency}
-              setName={setName}
-              setEmail={setEmail}
-              setPhone={setPhone}
-              setGender={setGender}
-              setAgeValue={setAgeValue}
-              setWeight={setWeight}
-              setHeight={setHeight}
-              setTrainingGoal={setTrainingGoal}
-              setActivityLevel={setActivityLevel}
-              setMedicalCondition={setMedicalCondition}
-              setFoodAllergy={setFoodAllergy}
-              setTrainingFrequency={setTrainingFrequency}
-              handleSubmitDiet={handleSubmitDiet}
-            />
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
+        effect="fade"
+        cardsEffect={{
+            slideShadows: false,
+          }}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        className="w-[100vh] h-[34rem] mx-auto"
+      >
+          {Array.from({ length: 8 }).map((_, index) => (
+            <SwiperSlide key={index}>
+              <QuestionCarouselItem
+                id={index+1}
+                name={name}
+                email={email}
+                phone={phone}
+                gender={gender}
+                ageValue={ageValue}
+                weight={weight}
+                height={height}
+                trainingGoal={trainingGoal}
+                activityLevel={activityLevel}
+                medicalCondition={medicalCondition}
+                foodAllergy={foodAllergy}
+                trainingFrequency={trainingFrequency}
+                setName={setName}
+                setEmail={setEmail}
+                setPhone={setPhone}
+                setGender={setGender}
+                setAgeValue={setAgeValue}
+                setWeight={setWeight}
+                setHeight={setHeight}
+                setTrainingGoal={setTrainingGoal}
+                setActivityLevel={setActivityLevel}
+                setMedicalCondition={setMedicalCondition}
+                setFoodAllergy={setFoodAllergy}
+                setTrainingFrequency={setTrainingFrequency}
+                handleSubmitDiet={handleSubmitDiet}
+              />
+            </SwiperSlide>
           ))}
-        </CarouselContent>
-        <CarouselNext />
-        <CarouselPrevious/>
-      </Carousel>
+        </Swiper>
     </div>
   );
 } 
